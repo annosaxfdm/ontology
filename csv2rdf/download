@@ -1,0 +1,4 @@
+#!/bin/sh
+mkdir -p csv
+KEY=1cstfVTna6UoaXXkE1DyM1NwSxyno4Rf0imOTOcSo82c
+wget "https://docs.google.com/spreadsheets/d/${KEY}/export?format=csv&gid=0" -O csv/bone.csv

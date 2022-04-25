@@ -1,0 +1,21 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX anno: <http://annosaxfdm.eu/ontology/>
+
+CONSTRUCT
+{
+    ?c a owl:Class;
+	rdfs:subClassOf ?sup;
+	rdfs:label ?len;
+	rdfs:label ?lde;
+	rdfs:label ?lat.
+}
+FROM <file:./csv/bone.csv>
+WHERE
+{
+   BIND (URI(CONCAT(tarql:expandPrefix('anno'),?suffix)) AS ?c)
+   BIND (IF(?en != '',  STRLANG(?en,"en"), ?nothing) AS ?len)
+   BIND (IF(?de != '',  STRLANG(?de,"de"), ?nothing) AS ?lde)
+   BIND (IF(?lat != '', STRLANG(?de,"lat"), ?nothing) AS ?llat)
+   BIND (IF(BOUND(?super)&&(?super!= ''), URI(CONCAT(tarql:expandPrefix(?anno),?super)), ?nothing) AS ?sup)
+}

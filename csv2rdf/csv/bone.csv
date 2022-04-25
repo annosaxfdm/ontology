@@ -1,0 +1,8 @@
+en,suffix,super,de,la,fma_id,ta_id,...
+Bone,Bone,,Knochen,Os,,,
+Skull bone,SkullBone,Bone,Schädelknochen,Cranium,,,
+Brain skull bone,BrainSkullBone,SkullBone,Hirnschädelknochen,Neurocranium,,,
+Occipital bone,OccipitalBone,BrainSkullBone,Hinterhauptbein,Os occipitale,,,
+Parietal bone,ParietalBone,BrainSkullBone,Scheitelbein,Os parietale,,,
+Facial skull bone,FacialSkullBone,SkullBone,,,,,
+Zygomatic bone,ZygomaticBone,FacialSkullBone,,,,,
