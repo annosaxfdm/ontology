@@ -185,6 +185,7 @@
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalLine">
         <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/9657"/>
+        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#LineRegion"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -220,6 +221,7 @@
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalPoint">
         <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/9658"/>
+        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#PointRegion"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -236,7 +238,7 @@
     <!-- https://annosaxfdm.de/ontology/AnatomicalProperty -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalProperty">
-        <rdfs:subClassOf rdf:resource=""/>
+        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#Attributive"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#propertyOf"/>
@@ -252,6 +254,7 @@
     <!-- https://annosaxfdm.de/ontology/AnatomicalSpace -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalSpace">
+        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#SpaceRegion"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -285,6 +288,7 @@
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalSurface">
         <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/fma24137"/>
+        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#SurfaceRegion"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -310,6 +314,8 @@
     <!-- https://annosaxfdm.de/ontology/BoneCompound -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/BoneCompound">
+        <skos:related rdf:resource="http://purl.org/sig/ont/fma/fma23881"/>
+        <skos:related rdf:resource="http://purl.org/sig/ont/fma/fma85544"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/BoneStructure"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -334,8 +340,8 @@
     <!-- https://annosaxfdm.de/ontology/BonePart -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/BonePart">
-        <skos:related rdf:resource=""/>
-        <skos:related rdf:resource=""/>
+        <skos:related rdf:resource="http://purl.org/sig/ont/fma/fma281808"/>
+        <skos:related rdf:resource="http://purl.org/sig/ont/fma/fma10483"/>
         <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/fma"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/BoneStructure"/>
         <rdfs:subClassOf>
@@ -381,6 +387,7 @@
     <!-- https://annosaxfdm.de/ontology/Phenotype -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/Phenotype">
+        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#Attributive"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://annosaxfdm.de/ontology/derivedFrom"/>
@@ -402,6 +409,8 @@
     <!-- https://annosaxfdm.de/ontology/RelativeAnatomicalLocation -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/RelativeAnatomicalLocation">
+        <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/fma30346"/>
+        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#Relator"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://annosaxfdm.de/ontology/locationOf"/>
@@ -449,6 +458,7 @@
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity">
         <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/fma67112"/>
+        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#SpaceEntity"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/AnatomicalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -465,6 +475,7 @@
     <!-- https://annosaxfdm.de/ontology/Tooth -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/Tooth">
+        <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/fma12516"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/ToothStructure"/>
         <rdfs:comment xml:lang="en">A human tooth is the individual entity of the human dentition or the teeth as a whole. Teeth are parts of the skeleton, yet they are characterised by their own distinctive tissue and thus treated separately from bones. Teeth, such as the Dens caninus (canine tooth) are located on bone structures.</rdfs:comment>
         <rdfs:label xml:lang="en">Tooth</rdfs:label>
