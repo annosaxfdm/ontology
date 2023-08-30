@@ -1,5 +1,7 @@
 # The Anthropological Notation Ontology (ANNO)
 
+[![DOI](https://zenodo.org/badge/473966297.svg)](https://zenodo.org/badge/latestdoi/473966297)
+
 ANNO consists of ANNOdc (domain-core) and ANNOds (domain-specific).
 ANNOdc is connected to the General Formal Ontology (GFO).
 
