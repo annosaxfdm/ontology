@@ -1,0 +1,39 @@
+{
+  "title": "ANNO",
+  "upload_type": "dataset",
+  "description": "Anthropological Notation Ontology",
+  "creators": [
+    {
+      "name": "Alexandr Uciteli",
+      "affiliation": "Leipzig University, Institute for Medical Informatics, Statistics and Epidemiology, Leipzig, Germany",
+      "orcid": "0000-0001-9558-5352"
+    },
+    {
+      "name": "Dirk Labudde",
+      "affiliation": "University of Applied Sciences Mittweida, Mittweida, Germany"
+    },
+    {
+      "name": "Marie Heuschkel",
+      "affiliation": "University of Applied Sciences Mittweida, Mittweida, Germany"
+    },
+    {
+      "name": "Konrad Höffner",
+      "affiliation": "Leipzig University, Institute for Medical Informatics, Statistics and Epidemiology, Leipzig, Germany",
+      "orcid": "0000-0001-7358-3217"
+    },
+    {
+      "name": "Fabian Schmiedel",
+      "affiliation": "University of Applied Sciences Mittweida, Mittweida, Germany"
+    },
+    {
+      "name": "Andy Ludwig",
+      "affiliation": "University of Applied Sciences Mittweida, Mittweida, Germany"
+    },
+    {
+      "name": "Marleen Mohaupt",
+      "affiliation": "University of Applied Sciences Mittweida, Mittweida, Germany"
+    }
+  ],
+  "keywords": ["ontology", "semantic web", "health information systems", "linked open data"],
+  "license": "cc-zero"
+}
