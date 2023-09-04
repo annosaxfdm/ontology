@@ -7,7 +7,6 @@ ANNOdc is connected to the General Formal Ontology (GFO).
 
 ## Releases
 
-The complete ANNO ontology including ANNOds is only included in releases right now and not in the repository itself.
 Releases have the [calendar versioning](https://calver.org/) scheme YY.MM for short year and short month.
 For example, [23.08](https://github.com/annosaxfdm/ontology/releases/tag/23.08) is the state of August, 2023 and contains the ontology as <https://github.com/annosaxfdm/ontology/releases/download/23.08/anno.owl>.
 Each release *must* include `anno.owl` as attached binary, leading to the dynamic link to the newest version at <https://github.com/annosaxfdm/ontology/releases/latest/download/anno.owl>.
