@@ -1,0 +1,15 @@
+#!/bin/sh
+# Combine annodc.owl and annods.owl and convert it to anno.ttl.
+SCRIPT_PATH=`dirname "$0"`
+ROOT=`( cd "$SCRIPT_PATH/.." && pwd )`
+DIST=$ROOT/dist
+mkdir -p $ROOT/dist
+rapper -i rdfxml $ROOT/annodc.owl -o ntriples > /tmp/annodc.nt
+rapper -i rdfxml $ROOT/annods.owl -o ntriples > /tmp/annods.nt
+# workaround for spaces in URIs
+cat $SCRIPT_PATH/prefix.ttl /tmp/annodc.nt /tmp/annods.nt \
+| sed  "s/\\\u0020/%20/g" \
+> /tmp/anno.ttl
+# resulting file is valid turtle but does not use prefixes yet
+# reconvert to apply prefixes
+rapper -i turtle -o turtle /tmp/anno.ttl > $DIST/anno.ttl
