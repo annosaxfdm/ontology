@@ -18215,7 +18215,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:file>Coxae_Pubis_Corpus ossis pubis_AL_extern</ontology:file>
         <ontology:headline>Corpus ossis pubis, rechtes Coxae, von extern</ontology:headline>
         <ontology:id>IMAGE_0222</ontology:id>
-        <ontology:location rdf:resource="https://biosciences.hs-mittweida.de/anno/Coxae_Pubis_Corpus ossis pubis_AL_extern"/>
+        <ontology:location rdf:resource="https://biosciences.hs-mittweida.de/anno/Coxae_Pubis_Corpus ossis pubis_AL_extern.png"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0015"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0053"/>
     </owl:Class>
@@ -18230,7 +18230,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:file>Coxae_Pubis_Pars symphysialis_AL_extern</ontology:file>
         <ontology:headline>Pars symphysialis, rechtes Coxae, von extern</ontology:headline>
         <ontology:id>IMAGE_0223</ontology:id>
-        <ontology:location rdf:resource="https://biosciences.hs-mittweida.de/anno/Coxae_Pubis_Pars symphysialis_AL_extern"/>
+        <ontology:location rdf:resource="https://biosciences.hs-mittweida.de/anno/Coxae_Pubis_Pars symphysialis_AL_extern.png"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0015"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0054"/>
     </owl:Class>
