@@ -1,0 +1,7 @@
+#!/bin/sh
+SCRIPT_PATH=`dirname "$0"`
+ROOT=`( cd "$SCRIPT_PATH/.." && pwd )`
+DIST=$ROOT/dist
+$SCRIPT_PATH/combine
+pyshacl -s $ROOT/shacl.ttl -a -f human $DIST/anno.ttl | tee /tmp/shacl.txt
+exit
