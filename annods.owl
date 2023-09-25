@@ -27935,7 +27935,7 @@ Thailand</ontology:reference>
 
 
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology">
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-25T14:00:20.86790082</terms:created>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-25T14:32:49.679499164</terms:created>
         <terms:creator rdf:resource="https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/fritzsch-hanjo-tim"/>
         <terms:creator rdf:resource="https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise"/>
         <terms:creator rdf:resource="https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/schmiedel-fabian"/>
@@ -47557,6 +47557,7 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <ontology:thresholdMale>&gt;0</ontology:thresholdMale>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/SexVodonovic20062">
+        <rdfs:label>Sex Vodonovic_2006  2</rdfs:label>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0057"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/SexVodonovic20063">
@@ -47599,6 +47600,7 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <ontology:thresholdMale>&gt;-0,3</ontology:thresholdMale>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/SexVodonovic20066">
+        <rdfs:label>Sex Vodonovic_2006  6</rdfs:label>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0057"/>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/SexVodonovic20067">
@@ -47641,6 +47643,7 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <ontology:thresholdMale>&gt;-0,4</ontology:thresholdMale>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/SexVodonovic6Dexter">
+        <rdfs:label>Sex Vodonovic 6 dexter</rdfs:label>
         <ontology:accuracy>0</ontology:accuracy>
         <ontology:function>([ppam dexterum-go dexterum-piam dexterum] ∗ 0, 17) − 20, 43</ontology:function>
         <ontology:id>PH017</ontology:id>
@@ -47653,6 +47656,7 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <ontology:thresholdMale>&gt;0,2</ontology:thresholdMale>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/SexVodonovic6Sinister">
+        <rdfs:label>Sex Vodonovic 6 sinister</rdfs:label>
         <ontology:accuracy>0</ontology:accuracy>
         <ontology:function>([ppam sinistrum-go sinistrum-piam sinistrum] ∗ 0, 17) − 20, 43</ontology:function>
         <ontology:id>PH018</ontology:id>
