@@ -139,10 +139,10 @@
     
 
 
-    <!-- https://annosaxfdm.de/ontology/fDICode -->
+    <!-- https://annosaxfdm.de/ontology/fdiCode -->
 
 
-    <owl:AnnotationProperty rdf:about="https://annosaxfdm.de/ontology/fDICode"/>
+    <owl:AnnotationProperty rdf:about="https://annosaxfdm.de/ontology/fdiCode"/>
     
 
 
@@ -27935,7 +27935,7 @@ Thailand</ontology:reference>
 
 
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology">
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-25T13:41:07.354014665</terms:created>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-25T14:00:20.86790082</terms:created>
         <terms:creator rdf:resource="https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/fritzsch-hanjo-tim"/>
         <terms:creator rdf:resource="https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise"/>
         <terms:creator rdf:resource="https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/schmiedel-fabian"/>
@@ -32735,10 +32735,10 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="la">Dentes canini</rdfs:label>
         <rdfs:label xml:lang="de">Eckzähne</rdfs:label>
         <ontology:definition xml:lang="de">Evolutionshistorisch waren die Dentes canini spitz zulaufend und funktionell zum Festhalten von Nahrung da. Doch beim modernen Menschen sind diese häufiger als eine Erweiterung der Dentes incisivi vorzufinden aber mit einer etwas kantigeren Gestalt. Pro Quadrant gibt es einen von ihnen, jeweils distal des Dentes incisivi. Der FDI-Code lautet bei den Dentes permanentes (13,23/43,33) und bei den Dentes decidui (53,63/83,73). Die Dentes canini werden auch den anterioren Dentes zugeordnet.</ontology:definition>
-        <ontology:fDICode>13</ontology:fDICode>
-        <ontology:fDICode>23</ontology:fDICode>
-        <ontology:fDICode>33</ontology:fDICode>
-        <ontology:fDICode>43</ontology:fDICode>
+        <ontology:fdiCode>13</ontology:fdiCode>
+        <ontology:fdiCode>23</ontology:fdiCode>
+        <ontology:fdiCode>33</ontology:fdiCode>
+        <ontology:fdiCode>43</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55636"/>
         <ontology:id>DE012</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
@@ -32779,7 +32779,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right lower permanent canine tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right lower secondary canine tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens caninus mandibularis dexter handelt es sich um den Dens caninus im rechten Quadranten der Mandibula, distal des Dens incisivus lateralis mandibularis dexter. Er besitzt bei den Dentes decidui den FDI-Code 83, bei den Dentes permanentes 43.</ontology:definition>
-        <ontology:fDICode>43</ontology:fDICode>
+        <ontology:fdiCode>43</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55686"/>
         <ontology:id>DE013</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -32816,7 +32816,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left lower permanent canine tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Left lower secondary canine tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens caninus mandibularis sinister handelt es sich um den Dens caninus im linken Quadranten der Mandibula, distal des Dens incisivus mandibularis sinister. Er besitzt bei den Dentes decidui den FDI-Code 73, bei den Dentes permanentes 33.</ontology:definition>
-        <ontology:fDICode>33</ontology:fDICode>
+        <ontology:fdiCode>33</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55687"/>
         <ontology:id>DE014</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -32853,7 +32853,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right upper permanent canine tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right upper secondary canine tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens caninus maxillaris dexter handelt es sich um den Dens caninus im rechten Quadranten der Maxilla, distal des Dens incisivus maxillaris dexter. Er besitzt bei den Dentes decidui den FDI-Code 53, bei den Dentes permanentes 13.</ontology:definition>
-        <ontology:fDICode>13</ontology:fDICode>
+        <ontology:fdiCode>13</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55798"/>
         <ontology:id>DE015</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -32890,7 +32890,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left upper permanent canine tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Left upper secondary canine tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens caninus maxillaris sinister handelt es sich um den Dens caninus im linken Quadranten der Maxilla, distal des Dens incisivus maxillaris sinister. Er besitzt bei den Dentes decidui den FDI-Code 63, bei den Dentes permanentes 23.</ontology:definition>
-        <ontology:fDICode>23</ontology:fDICode>
+        <ontology:fdiCode>23</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55799"/>
         <ontology:id>DE016</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -32925,14 +32925,14 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="en">Incisors</rdfs:label>
         <rdfs:label xml:lang="de">Schneidezähne</rdfs:label>
         <ontology:definition xml:lang="de">Die Dentes incisivi sind flach zulaufend und besitzen an der Spitze eine scharfe Kante. Pro Quadrant gibt es jeweils zwei von ihnen: I1 und I2. Die Hauptaufgabe liegt im Schneiden und Zerkleinern der Nahrung. Der FDI-Code des ersten Incisivus (I1) beträgt bei den Dentes permanentes (11,21/41,31) und bei den Dentes decidui (51,61/81,71), des zweiten Incisivus (I2) bei den Dentes permanentes (12,22/42,32) und bei den Dentes decidui (52,62/82,72). Die Dentes incisivi werden auch den anterioren Dentes zugeordnet.</ontology:definition>
-        <ontology:fDICode>11</ontology:fDICode>
-        <ontology:fDICode>12</ontology:fDICode>
-        <ontology:fDICode>21</ontology:fDICode>
-        <ontology:fDICode>22</ontology:fDICode>
-        <ontology:fDICode>31</ontology:fDICode>
-        <ontology:fDICode>32</ontology:fDICode>
-        <ontology:fDICode>41</ontology:fDICode>
-        <ontology:fDICode>42</ontology:fDICode>
+        <ontology:fdiCode>11</ontology:fdiCode>
+        <ontology:fdiCode>12</ontology:fdiCode>
+        <ontology:fdiCode>21</ontology:fdiCode>
+        <ontology:fdiCode>22</ontology:fdiCode>
+        <ontology:fdiCode>31</ontology:fdiCode>
+        <ontology:fdiCode>32</ontology:fdiCode>
+        <ontology:fdiCode>41</ontology:fdiCode>
+        <ontology:fdiCode>42</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma12823"/>
         <ontology:id>DE003</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
@@ -32980,7 +32980,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right lower lateral permanent incisor tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right lower lateral secondary  incisor tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens incisivus lateralis mandibularis dexter handelt es sich um den zweiten bzw. distalen Dens incisivus im rechten Quadranten der Mandibula. Er besitzt bei den Dentes decidui den FDI-Code 82, bei den Dentes permanentes 42.</ontology:definition>
-        <ontology:fDICode>42</ontology:fDICode>
+        <ontology:fdiCode>42</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma57140"/>
         <ontology:id>DE006</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33019,7 +33019,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left lower lateral permanent incisor tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Left lower lateral secondary incisor tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens incisivus lateralis mandibularis sinister handelt es sich um den zweiten bzw. distalen Dens incisivus im linken Quadranten der Mandibula. Er besitzt bei den Dentes decidui den FDI-Code 72, bei den Dentes permanentes 32.</ontology:definition>
-        <ontology:fDICode>32</ontology:fDICode>
+        <ontology:fdiCode>32</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma57141"/>
         <ontology:id>DE007</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33058,7 +33058,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right upper lateral permanent incisor tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right upper lateral secondary incisor tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens incisivus lateralis maxillaris dexter handelt es sich um den zweiten bzw. distalen Dens incisivus im rechten Quadranten der Maxilla. Er besitzt bei den Dentes decidui den FDI-Code 52, bei den Dentes permanentes 12.</ontology:definition>
-        <ontology:fDICode>12</ontology:fDICode>
+        <ontology:fdiCode>12</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55680"/>
         <ontology:id>DE010</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33097,7 +33097,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left upper lateral permanent incisor tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Left upper lateral secondary incisor tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens incisivus lateralis maxillaris sinister handelt es sich um den zweiten bzw. distalen Dens incisivus im linken Quadranten der Maxilla. Er besitzt bei den Dentes decidui den FDI-Code 62, bei den Dentes permanentes 22.</ontology:definition>
-        <ontology:fDICode>22</ontology:fDICode>
+        <ontology:fdiCode>22</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55683"/>
         <ontology:id>DE011</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33137,7 +33137,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right lower central permanent incisor tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right secondary lower central incisor tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens incisivus medialis mandibularis dexter handelt es sich um den ersten bzw. mesialen Dens incisivus im rechten Quadranten der Mandibula. Er besitzt bei den Dentes decidui den FDI-Code 81, bei den Dentes permanentes 41.</ontology:definition>
-        <ontology:fDICode>41</ontology:fDICode>
+        <ontology:fdiCode>41</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma57142"/>
         <ontology:id>DE004</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33177,7 +33177,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left lower central permanent incisor tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Left secondary lower central incisor tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens incisivus medialis mandibularis sinister handelt es sich um den ersten bzw. mesialen Dens incisivus im linken Quadranten der Mandibula. Er besitzt bei den Dentes decidui den FDI-Code 71, bei den Dentes permanentes 31.</ontology:definition>
-        <ontology:fDICode>31</ontology:fDICode>
+        <ontology:fdiCode>31</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma57143"/>
         <ontology:id>DE005</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33217,7 +33217,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right secondary upper central incisor tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right upper central permanent incisor tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens incisivus medialis maxillaris dexter handelt es sich um den ersten bzw. mesialen Dens incisivus im rechten Quadranten der Maxilla. Er besitzt bei den Dentes decidui den FDI-Code 51, bei den Dentes permanentes 11.</ontology:definition>
-        <ontology:fDICode>11</ontology:fDICode>
+        <ontology:fdiCode>11</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55681"/>
         <ontology:id>DE008</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33257,7 +33257,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left upper central permanent incisor tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Left upper central secondary incisor tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens incisivus medialis maxillaris sinister handelt es sich um den ersten bzw. mesialen Dens incisivus im linken Quadranten der Maxilla. Er besitzt bei den Dentes decidui den FDI-Code 61, bei den Dentes permanentes 21.</ontology:definition>
-        <ontology:fDICode>21</ontology:fDICode>
+        <ontology:fdiCode>21</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55682"/>
         <ontology:id>DE009</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33295,7 +33295,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right lower first permanent molar tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right lower first secondary molar tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens molaris primus mandibularis dexter handelt es sich um den ersten Dens molaris im rechten Quadranten der Mandibula, distal des Dens premolaris secundus mandibularis dexter (bei den Dentes decidui distal des Dens caninus mandibularis dexter). Er besitzt bei den Dentes decidui den FDI-Code 84, bei den Dentes permanentes 46.</ontology:definition>
-        <ontology:fDICode>46</ontology:fDICode>
+        <ontology:fdiCode>46</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55705"/>
         <ontology:id>DE027</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33333,7 +33333,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left lower secondary molar tooth</skos:altLabel>
         <skos:altLabel xml:lang="la">M1 mandibularis sinister</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens molaris primus mandibularis sinister  handelt es sich um den ersten Dens molaris im linken Quadranten der Mandibula, distal des Dens premolaris secundus mandibularis sinister (bei den Dentes decidui distal des Dens caninus mandibularis sinister). Er besitzt bei den Dentes decidui den FDI-Code 74, bei den Dentes permanentes 36.</ontology:definition>
-        <ontology:fDICode>36</ontology:fDICode>
+        <ontology:fdiCode>36</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55704"/>
         <ontology:id>DE028</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33371,7 +33371,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right upper first permanent molar tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right upper first secondary molar tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens molaris primus maxillaris dexter handelt es sich um den ersten Dens molaris im rechten Quadranten der Maxilla, distal des Dens premolaris secundus maxillaris dexter (bei den Dentes decidui distal des Dens caninus maxillaris dexter). Er besitzt bei den Dentes decidui den FDI-Code 54, bei den Dentes permanentes 16.</ontology:definition>
-        <ontology:fDICode>16</ontology:fDICode>
+        <ontology:fdiCode>16</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55698"/>
         <ontology:id>DE033</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33409,7 +33409,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left upper first secondary molar tooth</skos:altLabel>
         <skos:altLabel xml:lang="la">M1 maxillaris sinister</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens molaris primus maxillaris sinister handelt es sich um den ersten Dens molaris im linken Quadranten der Maxilla, distal des Dens premolaris secundus maxillaris sinister (bei den Dentes decidui distal des Dens caninus maxillaris sinister). Er besitzt bei den Dentes decidui den FDI-Code 64, bei den Dentes permanentes 26.</ontology:definition>
-        <ontology:fDICode>26</ontology:fDICode>
+        <ontology:fdiCode>26</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55699"/>
         <ontology:id>DE034</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33447,7 +33447,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right lower second permanent molar tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right lower second secondary molar tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens molaris secundus mandibularis dexter handelt es sich um den zweiten Dens molaris im rechten Quadranten der Mandibula, distal des Dens molaris primus mandibularis dexter. Er besitzt bei den Dentes decidui den FDI-Code 85, bei den Dentes permanentes 47.</ontology:definition>
-        <ontology:fDICode>47</ontology:fDICode>
+        <ontology:fdiCode>47</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55706"/>
         <ontology:id>DE029</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33485,7 +33485,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left lower second secondary molar tooth</skos:altLabel>
         <skos:altLabel xml:lang="la">M2 mandibularis sinister</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens molaris secundus mandibularis sinister handelt es sich um den zweiten Dens molaris im linken Quadranten der Mandibula, distal des Dens molaris primus mandibularis sinister. Er besitzt bei den Dentes decidui den FDI-Code 75, bei den Dentes permanentes 37.</ontology:definition>
-        <ontology:fDICode>37</ontology:fDICode>
+        <ontology:fdiCode>37</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55703"/>
         <ontology:id>DE030</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33523,7 +33523,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right upper second permanent molar tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right upper second secondary molar tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens molaris secundus maxillaris dexter handelt es sich um den zweiten Dens molaris im rechten Quadranten der Maxilla, distal des Dens molaris primus maxillaris dexter. Er besitzt bei den Dentes decidui den FDI-Code 55, bei den Dentes permanentes 17.</ontology:definition>
-        <ontology:fDICode>17</ontology:fDICode>
+        <ontology:fdiCode>17</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55697"/>
         <ontology:id>DE035</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33561,7 +33561,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left upper second secondary molar tooth</skos:altLabel>
         <skos:altLabel xml:lang="la">M2 maxillaris sinister</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens molaris secundus maxillaris sinister handelt es sich um den zweiten Dens molaris im linken Quadranten der Maxilla, distal des Dens molaris primus maxillaris sinister. Er besitzt bei den Dentes decidui den FDI-Code 65, bei den Dentes permanentes 27.</ontology:definition>
-        <ontology:fDICode>27</ontology:fDICode>
+        <ontology:fdiCode>27</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55700"/>
         <ontology:id>DE036</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33599,7 +33599,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right lower third permanent molar tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right lower third secondary molar tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens molaris tertius mandibularis dexter  handelt es sich um den dritten Dens molaris im rechten Quadranten der Mandibula, distal des Dens molaris secundus mandibularis dexter. Er besitzt bei den Dentes permanentes den FDI-Code 48 und kommt bei den Dentes decidui nicht vor.</ontology:definition>
-        <ontology:fDICode>48</ontology:fDICode>
+        <ontology:fdiCode>48</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55707"/>
         <ontology:id>DE031</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33637,7 +33637,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left lower third secondary molar tooth</skos:altLabel>
         <skos:altLabel xml:lang="la">M3 mandibularis sinister</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens molaris tertius mandibularis tertius handelt es sich um den dritten Dens molaris im linken Quadranten der Mandibula, distal des Dens molaris secundus mandibularis sinister. Er besitzt bei den Dentes permanentes den FDI-Code 38 und kommt bei den Dentes decidui nicht vor.</ontology:definition>
-        <ontology:fDICode>38</ontology:fDICode>
+        <ontology:fdiCode>38</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55702"/>
         <ontology:id>DE032</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33675,7 +33675,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right upper third permanent molar tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right upper third secondary molar tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens molaris tertius maxillaris dexter handelt es sich um den dritten Dens molaris im rechten Quadranten der Maxilla, distal des Dens molaris secundus maxillaris dexter. Er besitzt bei den Dentes permanentes den FDI-Code 18 und kommt bei den Dentes decidui nicht vor.</ontology:definition>
-        <ontology:fDICode>18</ontology:fDICode>
+        <ontology:fdiCode>18</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55696"/>
         <ontology:id>DE037</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33713,7 +33713,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left upper third secondary molar tooth</skos:altLabel>
         <skos:altLabel xml:lang="la">M3 maxillaris sinister</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens molaris tertius maxillaris sinister handelt es sich um den dritten Dens molaris im linken Quadranten der Maxilla, distal des Dens molaris secundus maxillaris sinister. Er besitzt bei den Dentes permanentes den FDI-Code 28 und kommt bei den Dentes decidui nicht vor.</ontology:definition>
-        <ontology:fDICode>28</ontology:fDICode>
+        <ontology:fdiCode>28</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55701"/>
         <ontology:id>DE038</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33748,18 +33748,18 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="de">Kauzähne</rdfs:label>
         <rdfs:label xml:lang="en">Molars</rdfs:label>
         <ontology:definition xml:lang="de">Die Dentes molares sind die größten Zähne des Menschen. Sie besitzen eine nahezu quaderförmige Form mit strukturierter Kaufläche. Sie liegen bei den Dentes permanentes distal der Dentes premolares, bei den Dentes decidui distal der Dentes canini. Ihre Funktion ist das Kauen, Zermahlen und Zerbeißen von Nahrung. Pro Quadrant gibt es bei den Dentes permanentes drei: M1, M2 und M3, bei Dentes decidui nur zwei: M1 und M2. Der FDI-Code für den ersten Molaren (M1) bei den Dentes permanentes lautet (16,26/46,36), für den Zweiten (M2) (17,27/47,37) und für den Dritten (M3) (18,28/48,38). Bei den Dentes decidui lautet der FDI-Code für M1 (54,64/84,74) und für M2 (55,65/85,75). Die Dentes molares werden auch den posterioren Dentes zugeordnet.</ontology:definition>
-        <ontology:fDICode>16</ontology:fDICode>
-        <ontology:fDICode>17</ontology:fDICode>
-        <ontology:fDICode>18</ontology:fDICode>
-        <ontology:fDICode>26</ontology:fDICode>
-        <ontology:fDICode>27</ontology:fDICode>
-        <ontology:fDICode>28</ontology:fDICode>
-        <ontology:fDICode>36</ontology:fDICode>
-        <ontology:fDICode>37</ontology:fDICode>
-        <ontology:fDICode>38</ontology:fDICode>
-        <ontology:fDICode>46</ontology:fDICode>
-        <ontology:fDICode>47</ontology:fDICode>
-        <ontology:fDICode>48</ontology:fDICode>
+        <ontology:fdiCode>16</ontology:fdiCode>
+        <ontology:fdiCode>17</ontology:fdiCode>
+        <ontology:fdiCode>18</ontology:fdiCode>
+        <ontology:fdiCode>26</ontology:fdiCode>
+        <ontology:fdiCode>27</ontology:fdiCode>
+        <ontology:fdiCode>28</ontology:fdiCode>
+        <ontology:fdiCode>36</ontology:fdiCode>
+        <ontology:fdiCode>37</ontology:fdiCode>
+        <ontology:fdiCode>38</ontology:fdiCode>
+        <ontology:fdiCode>46</ontology:fdiCode>
+        <ontology:fdiCode>47</ontology:fdiCode>
+        <ontology:fdiCode>48</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55638"/>
         <ontology:id>DE026</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
@@ -33851,7 +33851,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right lower first permanent premolar tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right lower first secondary premolar tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens premolaris primus mandibularis dexter handelt es sich um den ersten Dens premolaris im rechten Quadranten der Mandibula, distal des Dens caninus mandibularis dexter. Er besitzt bei den Dentes permanentes den FDI-Code 44 und kommt bei den Dentes decidui nicht vor.</ontology:definition>
-        <ontology:fDICode>44</ontology:fDICode>
+        <ontology:fdiCode>44</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55694"/>
         <ontology:id>DE018</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33889,7 +33889,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left lower first secondary premolar tooth</skos:altLabel>
         <skos:altLabel xml:lang="la">P1 mandibularis sinister</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens premolaris primus mandibularis sinister handelt es sich um den ersten Dens premolaris im linken Quadranten der Mandibula, distal des Dens caninus mandibularis sinister. Er besitzt bei den Dentes permanentes den FDI-Code 34 und kommt bei den Dentes decidui nicht vor.</ontology:definition>
-        <ontology:fDICode>34</ontology:fDICode>
+        <ontology:fdiCode>34</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55693"/>
         <ontology:id>DE019</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33927,7 +33927,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right upper first permanent premolar tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right upper first secondary premolar tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens premolaris primus maxillaris dexter handelt es sich um den ersten Dens premolaris im rechten Quadranten der Maxilla, distal des Dens caninus maxillaris dexter. Er besitzt bei den Dentes permanentes den FDI-Code 14 und kommt bei den Dentes decidui nicht vor.</ontology:definition>
-        <ontology:fDICode>14</ontology:fDICode>
+        <ontology:fdiCode>14</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55689"/>
         <ontology:id>DE022</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -33965,7 +33965,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left upper first secondary premolar tooth</skos:altLabel>
         <skos:altLabel xml:lang="la">P1 maxillaris sinister</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens premolaris primus maxillaris sinister handelt es sich um den ersten Dens premolaris im linken Quadranten der Maxilla, distal des Dens caninus maxillaris sinister. Er besitzt bei den Dentes permanentes den FDI-Code 24 und kommt bei den Dentes decidui nicht vor.</ontology:definition>
-        <ontology:fDICode>24</ontology:fDICode>
+        <ontology:fdiCode>24</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55690"/>
         <ontology:id>DE023</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -34003,7 +34003,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right lower second permanent premolar tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right lower second secondary premolar tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens premolaris secundus mandibularis dexter handelt es sich um den zweiten Dens premolaris im rechten Quadranten der Mandibula, distal des Dens premolaris primus mandibularis dexter. Er besitzt bei den Dentes permanentes den FDI-Code 45 und kommt bei den Dentes decidui nicht vor.</ontology:definition>
-        <ontology:fDICode>45</ontology:fDICode>
+        <ontology:fdiCode>45</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55695"/>
         <ontology:id>DE020</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -34041,7 +34041,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left lower second secondary premolar tooth</skos:altLabel>
         <skos:altLabel xml:lang="la">P2 mandibularis sinister</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens premolaris secundus mandibularis sinister handelt es sich um den zweiten Dens premolaris im linken Quadranten der Mandibula, distal des Dens premolaris primus mandibularis sinister. Er besitzt bei den Dentes permanentes den FDI-Code 35 und kommt bei den Dentes decidui nicht vor.</ontology:definition>
-        <ontology:fDICode>35</ontology:fDICode>
+        <ontology:fdiCode>35</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55692"/>
         <ontology:id>DE021</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -34079,7 +34079,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Right upper second permanent premolar tooth</skos:altLabel>
         <skos:altLabel xml:lang="en">Right upper second secondary premolar tooth</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens premolaris secundus maxillaris dexter handelt es sich um den zweiten Dens premolaris im rechten Quadranten der Maxilla, distal des Dens premolaris primus maxillaris dexter. Er besitzt bei den Dentes permanentes den FDI-Code 15 und kommt bei den Dentes decidui nicht vor.</ontology:definition>
-        <ontology:fDICode>15</ontology:fDICode>
+        <ontology:fdiCode>15</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55688"/>
         <ontology:id>DE024</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -34117,7 +34117,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="en">Left upper second secondary premolar tooth</skos:altLabel>
         <skos:altLabel xml:lang="la">P2 maxillaris sinister</skos:altLabel>
         <ontology:definition xml:lang="de">Bei dem Dens premolaris secundus maxillaris sinister handelt es sich um den zweiten Dens premolaris im linken Quadranten der Maxilla, distal des Dens premolaris primus maxillaris sinister. Er besitzt bei den Dentes permanentes den FDI-Code 25 und kommt bei den Dentes decidui nicht vor.</ontology:definition>
-        <ontology:fDICode>25</ontology:fDICode>
+        <ontology:fdiCode>25</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55691"/>
         <ontology:id>DE025</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0005"/>
@@ -34155,14 +34155,14 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <skos:altLabel xml:lang="de">Premolaren</skos:altLabel>
         <skos:altLabel xml:lang="de">Prämolaren</skos:altLabel>
         <ontology:definition xml:lang="de">Die Dentes premolares sind der Übergang zwischen den Dentes canini und den Dentes molares. Ihre Form und Funktion ist bei den vorderen Dentes premolares ähnlich den Dentes canini und bei den hinteren ähnlich den Dentes molares. Pro Quadrant gibt es zwei von ihnen: P1 und P2. Bei den Dentes decidui sind keine vorhanden. Der FDI-Code für den ersten Dens premolaris (P1) lautet (14,24/44,34) und für den Zweiten (P2) (15,25/45,35). Die Dentes premolares werden auch den posterioren Dentes zugeordnet.</ontology:definition>
-        <ontology:fDICode>14</ontology:fDICode>
-        <ontology:fDICode>15</ontology:fDICode>
-        <ontology:fDICode>24</ontology:fDICode>
-        <ontology:fDICode>25</ontology:fDICode>
-        <ontology:fDICode>34</ontology:fDICode>
-        <ontology:fDICode>35</ontology:fDICode>
-        <ontology:fDICode>44</ontology:fDICode>
-        <ontology:fDICode>45</ontology:fDICode>
+        <ontology:fdiCode>14</ontology:fdiCode>
+        <ontology:fdiCode>15</ontology:fdiCode>
+        <ontology:fdiCode>24</ontology:fdiCode>
+        <ontology:fdiCode>25</ontology:fdiCode>
+        <ontology:fdiCode>34</ontology:fdiCode>
+        <ontology:fdiCode>35</ontology:fdiCode>
+        <ontology:fdiCode>44</ontology:fdiCode>
+        <ontology:fdiCode>45</ontology:fdiCode>
         <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma55637"/>
         <ontology:id>DE017</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
