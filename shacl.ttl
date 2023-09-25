@@ -46,6 +46,10 @@
 	sh:path :boneAffix;
 	sh:exactCount 1.
 
+:typeShape a sh:PropertyShape;
+	sh:path :type;
+	sh:exactCount 1.
+
 # SHACL does not support inheritance without using SPARQL so many values are duplicated.
 # See <https://stackoverflow.com/questions/70785194/shacl-closed-shape-with-superclass-inheritance>.
 # SHACL also doesn't support pairwise disjointness so we need to specify the full list on every shape.
@@ -100,6 +104,15 @@
 	sh:ignoredProperties :ignoredProperties.
 
 #### Tooth ###################################################################
+:universalNumberingSystemShape a sh:PropertyShape;
+	sh:path :universalNumberingSystem;
+	sh:exactCount 1.
+
+:fdiCodeShape a sh:PropertyShape;
+	sh:path :fdiCode;
+	sh:minCount 1;
+    sh:targetNode [ sh:not [ sh:hasValue :DensPermanens ] ].
+
 :ToothShape a sh:NodeShape;
 	sh:targetClass :ToothClass;
 	sh:disjoint :BoneShape;
@@ -109,6 +122,8 @@
 		:definitionShape,
 		:boneAffixShape,
 		:visualDefinitionShape,
+		:universalNumberingSystemShape,
+		:fdiCodeShape,
 		[sh:path :fmaId],
 		[sh:path :ta2Id],
 		[sh:path skos:closeMatch],
@@ -117,8 +132,36 @@
 	sh:ignoredProperties :ignoredProperties.
 
 #### Phenotype ###################################################################
+:accuracyShape a sh:PropertyShape;
+	sh:path :accuracy;
+	sh:exactCount 1.
+
 :missclassificationShape a sh:PropertyShape;
 	sh:path :missclassification;
+	sh:exactCount 1.
+
+:populationShape a sh:PropertyShape;
+	sh:path :population;
+	sh:exactCount 1.
+
+:sampleSizeShape a sh:PropertyShape;
+	sh:path :sampleSize;
+	sh:exactCount 1.
+
+:thresholdFemaleShape a sh:PropertyShape;
+	sh:path :thresholdFemale;
+	sh:exactCount 1.
+
+:thresholdIndifferentShape a sh:PropertyShape;
+	sh:path :thresholdIndifferent;
+	sh:exactCount 1.
+
+:thresholdMaleShape a sh:PropertyShape;
+	sh:path :thresholdMale;
+	sh:exactCount 1.
+
+:functionShape a sh:PropertyShape;
+	sh:path :function;
 	sh:exactCount 1.
 
 :PhenotypeShape a sh:NodeShape;
@@ -130,7 +173,14 @@
 		:definitionShape,
 		:boneAffixShape,
 		:visualDefinitionShape,
+		:accuracyShape,
 		:missclassificationShape,
+		:populationShape,
+		:sampleSizeShape,
+		:thresholdFemaleShape,
+		:thresholdIndifferentShape,
+		:thresholdMaleShape,
+		:functionShape,
 		[sh:path :fmaId],
 		[sh:path :ta2Id],
 		[sh:path skos:closeMatch],
@@ -158,7 +208,15 @@
 #### AnatomicalLine ###################################################################
 :physicalInstrumentShape a sh:PropertyShape;
 	sh:path :physicalInstrument;
-	sh:minCount 1.
+	sh:exactCount 1.
+
+:digitalInstrumentShape a sh:PropertyShape;
+	sh:path :digitalInstrument;
+	sh:exactCount 1.
+
+:shortDefShape a sh:PropertyShape;
+	sh:path :shortDef;
+	sh:exactCount 1.
 
 :AnatomicalLineShape a sh:NodeShape;
 	sh:targetClass :AnatomicalLineClass;
@@ -170,6 +228,8 @@
 		:boneAffixShape,
 		:visualDefinitionShape,
 		:physicalInstrumentShape,
+		:digitalInstrumentShape,
+		:shortDefShape,
 		[sh:path :fmaId],
 		[sh:path :ta2Id],
 		[sh:path skos:closeMatch],
@@ -187,6 +247,7 @@
 		:definitionShape,
 		:boneAffixShape,
 		:visualDefinitionShape,
+		:typeShape,
 		[sh:path :fmaId],
 		[sh:path :ta2Id],
 		[sh:path skos:closeMatch],
@@ -204,6 +265,7 @@
 		:definitionShape,
 		:boneAffixShape,
 		:visualDefinitionShape,
+		:typeShape,
 		[sh:path :fmaId],
 		[sh:path :ta2Id],
 		[sh:path skos:closeMatch],
@@ -212,10 +274,6 @@
 	sh:ignoredProperties :ignoredProperties.
 
 #### RelativeAnatomicalLocation ###################################################################
-:typeShape a sh:PropertyShape;
-	sh:path :type;
-	sh:exactCount 1.
-
 :RelativeAnatomicalLocationShape a sh:NodeShape;
 	sh:targetClass :RelativeAnatomicalLocationClass;
 	sh:disjoint :BoneShape;
