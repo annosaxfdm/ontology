@@ -146,13 +146,6 @@
     
 
 
-    <!-- https://annosaxfdm.de/ontology/fMAID -->
-
-
-    <owl:AnnotationProperty rdf:about="https://annosaxfdm.de/ontology/fMAID"/>
-    
-
-
     <!-- https://annosaxfdm.de/ontology/file -->
 
 
@@ -262,13 +255,6 @@
 
 
     <owl:AnnotationProperty rdf:about="https://annosaxfdm.de/ontology/sourceCode"/>
-    
-
-
-    <!-- https://annosaxfdm.de/ontology/tA2ID -->
-
-
-    <owl:AnnotationProperty rdf:about="https://annosaxfdm.de/ontology/tA2ID"/>
     
 
 
@@ -27949,7 +27935,7 @@ Thailand</ontology:reference>
 
 
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology">
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-21T16:26:26.652702804</terms:created>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-25T13:41:07.354014665</terms:created>
         <terms:creator rdf:resource="https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/fritzsch-hanjo-tim"/>
         <terms:creator rdf:resource="https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise"/>
         <terms:creator rdf:resource="https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/schmiedel-fabian"/>
@@ -28353,8 +28339,8 @@ Thailand</ontology:reference>
         <rdfs:label xml:lang="en">Ventral</rdfs:label>
         <rdfs:label xml:lang="la">Ventralis</rdfs:label>
         <ontology:definition xml:lang="de">nach vorne oder bauchwärts</ontology:definition>
-        <ontology:fMAID>74532</ontology:fMAID>
-        <ontology:fMAID>74534</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74532"/>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74534"/>
         <ontology:id>LO016</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -28372,8 +28358,8 @@ Thailand</ontology:reference>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>12</ontology:tA2ID>
-        <ontology:tA2ID>14</ontology:tA2ID>
+        <ontology:ta2Id>12</ontology:ta2Id>
+        <ontology:ta2Id>14</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Anterodistal">
@@ -28542,7 +28528,7 @@ Thailand</ontology:reference>
         <rdfs:label xml:lang="la">Apicalis</rdfs:label>
         <rdfs:label xml:lang="de">Apikal</rdfs:label>
         <ontology:definition xml:lang="de">zur Spitze gerichtet oder gehörend</ontology:definition>
-        <ontology:fMAID>74541</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74541"/>
         <ontology:id>LO040</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -28560,7 +28546,7 @@ Thailand</ontology:reference>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>23</ontology:tA2ID>
+        <ontology:ta2Id>23</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/ArcusAlveolaris">
@@ -29042,7 +29028,7 @@ Thailand</ontology:reference>
         <rdfs:label xml:lang="en">Basal</rdfs:label>
         <rdfs:label xml:lang="la">Basalis</rdfs:label>
         <ontology:definition xml:lang="de">zur Basis gerichtet,basalwärts</ontology:definition>
-        <ontology:fMAID>74542</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74542"/>
         <ontology:id>LO013</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -29060,7 +29046,7 @@ Thailand</ontology:reference>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>24</ontology:tA2ID>
+        <ontology:ta2Id>24</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Basion">
@@ -29859,7 +29845,7 @@ Thailand</ontology:reference>
         <rdfs:label xml:lang="la">Centralis</rdfs:label>
         <rdfs:label xml:lang="de">Zentral</rdfs:label>
         <ontology:definition xml:lang="de">den Mittelpunkt bildend / im Mittelpunkt gelegen</ontology:definition>
-        <ontology:fMAID>30328</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma30328"/>
         <ontology:id>LO029</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -29878,7 +29864,7 @@ Thailand</ontology:reference>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0026"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>36</ontology:tA2ID>
+        <ontology:ta2Id>36</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/CentrumFossaeRetromolaris">
@@ -34219,7 +34205,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="de">Rechts</rdfs:label>
         <rdfs:label xml:lang="en">Right</rdfs:label>
         <ontology:definition xml:lang="de">rechts</ontology:definition>
-        <ontology:fMAID>30333</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma30333"/>
         <ontology:id>LO015</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0010"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0011"/>
@@ -34234,7 +34220,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>7</ontology:tA2ID>
+        <ontology:ta2Id>7</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Distal">
@@ -34243,7 +34229,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="la">Distalis</rdfs:label>
         <ontology:definition xml:lang="de">zum Ende der Gliedmaßen hin, von der Körpermitte weg</ontology:definition>
         <ontology:definition xml:lang="de">zum Ende des Zahnbogens hingewandt (Zahn)</ontology:definition>
-        <ontology:fMAID>30327</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma30327"/>
         <ontology:id>LO021</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -34261,7 +34247,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>35</ontology:tA2ID>
+        <ontology:ta2Id>35</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
         <ontology:type>Tooth</ontology:type>
     </rdf:Description>
@@ -34296,8 +34282,8 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="la">Posterior</rdfs:label>
         <ontology:definition xml:lang="de">(Extremitäten) zum Handrücken oder zum Fußrücken hin</ontology:definition>
         <ontology:definition xml:lang="de">nach hinten oder rückenwärts</ontology:definition>
-        <ontology:fMAID>74533</ontology:fMAID>
-        <ontology:fMAID>74535</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74533"/>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74535"/>
         <ontology:id>LO018</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -34315,8 +34301,8 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>13</ontology:tA2ID>
-        <ontology:tA2ID>15</ontology:tA2ID>
+        <ontology:ta2Id>13</ontology:ta2Id>
+        <ontology:ta2Id>15</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/EkDexterEkSinister">
@@ -34813,7 +34799,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="en">External</rdfs:label>
         <rdfs:label xml:lang="la">Externus</rdfs:label>
         <ontology:definition xml:lang="de">außen liegend</ontology:definition>
-        <ontology:fMAID>74548</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74548"/>
         <ontology:id>LO036</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -34831,7 +34817,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>29</ontology:tA2ID>
+        <ontology:ta2Id>29</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/FaciesArticularisCondyliOccipitalis">
@@ -34984,7 +34970,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="en">Fibular</rdfs:label>
         <rdfs:label xml:lang="la">Fibularis</rdfs:label>
         <ontology:definition xml:lang="de">zur Fibula (Wadenbein) hin</ontology:definition>
-        <ontology:fMAID>74555</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74555"/>
         <ontology:id>LO030</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -35002,7 +34988,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>40</ontology:tA2ID>
+        <ontology:ta2Id>40</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/FmtDexterumFmtSinistrum">
@@ -35843,7 +35829,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="en">Frontal</rdfs:label>
         <rdfs:label xml:lang="la">Frontalis</rdfs:label>
         <ontology:definition xml:lang="de">stirnwärts</ontology:definition>
-        <ontology:fMAID>74536</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74536"/>
         <ontology:id>LO037</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -35861,7 +35847,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>16</ontology:tA2ID>
+        <ontology:ta2Id>16</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/FrontalPlane">
@@ -36962,8 +36948,8 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="la">Inferior</rdfs:label>
         <rdfs:label xml:lang="de">Kaudal</rdfs:label>
         <ontology:definition xml:lang="de">zum Steißende / zu den Füßen hin</ontology:definition>
-        <ontology:fMAID>74537</ontology:fMAID>
-        <ontology:fMAID>74539</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74537"/>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74539"/>
         <ontology:id>LO014</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -36981,8 +36967,8 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>19</ontology:tA2ID>
-        <ontology:tA2ID>21</ontology:tA2ID>
+        <ontology:ta2Id>19</ontology:ta2Id>
+        <ontology:ta2Id>21</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Inferolateral">
@@ -37076,7 +37062,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="de">Intermediär</rdfs:label>
         <rdfs:label xml:lang="en">LO027</rdfs:label>
         <ontology:definition xml:lang="de">dazwischen liegend (zwischen medial und lateral liegend)</ontology:definition>
-        <ontology:fMAID>74531</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74531"/>
         <ontology:id>LO026</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -37094,7 +37080,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>9</ontology:tA2ID>
+        <ontology:ta2Id>9</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Internal">
@@ -37119,7 +37105,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>30</ontology:tA2ID>
+        <ontology:ta2Id>30</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/JugaAlveolaria">
@@ -37401,7 +37387,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="en">Lateral</rdfs:label>
         <rdfs:label xml:lang="la">Lateralis</rdfs:label>
         <ontology:definition xml:lang="de">seitlich, von der Mitte weg</ontology:definition>
-        <ontology:fMAID>30332</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma30332"/>
         <ontology:id>LO020</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -37419,7 +37405,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>11</ontology:tA2ID>
+        <ontology:ta2Id>11</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/LineaMylohyoideus">
@@ -38341,7 +38327,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="en">Medial</rdfs:label>
         <rdfs:label xml:lang="la">Medialis</rdfs:label>
         <ontology:definition xml:lang="de">mittig, auf die Mitte zu</ontology:definition>
-        <ontology:fMAID>49444</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma49444"/>
         <ontology:id>LO022</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -38359,7 +38345,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>10</ontology:tA2ID>
+        <ontology:ta2Id>10</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Median">
@@ -38367,7 +38353,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="en">Median</rdfs:label>
         <rdfs:label xml:lang="la">Medianus</rdfs:label>
         <ontology:definition xml:lang="de">innerhalb der Medianebene</ontology:definition>
-        <ontology:fMAID>74528</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74528"/>
         <ontology:id>LO024</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -38385,7 +38371,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>4</ontology:tA2ID>
+        <ontology:ta2Id>4</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/MedianPlane">
@@ -38418,7 +38404,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="de">Mittlerer</rdfs:label>
         <ontology:definition xml:lang="de">Zwischen anterior und posterior bzw. internus und externus liegend</ontology:definition>
         <ontology:id>LO027</ontology:id>
-        <ontology:tA2ID>25</ontology:tA2ID>
+        <ontology:ta2Id>25</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/MembrumInferius">
@@ -42829,8 +42815,8 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="en">Volar</rdfs:label>
         <rdfs:label xml:lang="la">Volaris</rdfs:label>
         <ontology:definition xml:lang="de">zur Hohlhand hin</ontology:definition>
-        <ontology:fMAID>74557</ontology:fMAID>
-        <ontology:fMAID>74558</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74557"/>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74558"/>
         <ontology:id>LO032</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -42845,7 +42831,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0023"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
-        <ontology:tA2ID>42</ontology:tA2ID>
+        <ontology:ta2Id>42</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/ParpDexterumPpraDexterum">
@@ -43435,7 +43421,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="la">Peripheralis</rdfs:label>
         <rdfs:label xml:lang="la">Periphericus</rdfs:label>
         <ontology:definition xml:lang="de">zur Oberfläche des Körpers hin</ontology:definition>
-        <ontology:fMAID>74552</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74552"/>
         <ontology:id>LO031</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -43446,7 +43432,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0015"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0017"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0021"/>
-        <ontology:tA2ID>37</ontology:tA2ID>
+        <ontology:ta2Id>37</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Pes">
@@ -45519,7 +45505,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="de">Plantar</rdfs:label>
         <rdfs:label xml:lang="en">Plantar</rdfs:label>
         <ontology:definition xml:lang="de">zur Fußsohle hin</ontology:definition>
-        <ontology:fMAID>74560</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74560"/>
         <ontology:id>LO034</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -45537,7 +45523,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>43</ontology:tA2ID>
+        <ontology:ta2Id>43</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/PlanumNuchale">
@@ -46400,7 +46386,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <rdfs:label xml:lang="la">Profundus</rdfs:label>
         <rdfs:label xml:lang="de">Tief</rdfs:label>
         <ontology:definition xml:lang="de">tiefliegend</ontology:definition>
-        <ontology:fMAID>74551</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74551"/>
         <ontology:id>LO033</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -46418,7 +46404,7 @@ rechte Proc. coronoideus zweizackig vor, wird die vordere Spitze als Messpunkt g
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>33</ontology:tA2ID>
+        <ontology:ta2Id>33</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Prosthion">
@@ -46511,7 +46497,7 @@ bildet. Durch die Protuberantia mentalis sind beide Hälften der Mandibula mitei
         <rdfs:label xml:lang="en">Proximal</rdfs:label>
         <rdfs:label xml:lang="la">Proximalis</rdfs:label>
         <ontology:definition xml:lang="de">zum Rumpf hin / zur Körpermitte hin</ontology:definition>
-        <ontology:fMAID>30326</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma30326"/>
         <ontology:id>LO019</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -46529,7 +46515,7 @@ bildet. Durch die Protuberantia mentalis sind beide Hälften der Mandibula mitei
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>34</ontology:tA2ID>
+        <ontology:ta2Id>34</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Proximolateral">
@@ -46947,7 +46933,7 @@ bildet. Durch die Protuberantia mentalis sind beide Hälften der Mandibula mitei
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>38</ontology:tA2ID>
+        <ontology:ta2Id>38</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Radius">
@@ -47101,7 +47087,7 @@ bildet. Durch die Protuberantia mentalis sind beide Hälften der Mandibula mitei
         <rdfs:label xml:lang="en">Rostral</rdfs:label>
         <rdfs:label xml:lang="la">Rostralis</rdfs:label>
         <ontology:definition xml:lang="de">zum Mund oder zur Nasenspitze hin</ontology:definition>
-        <ontology:fMAID>74540</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74540"/>
         <ontology:id>LO039</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0010"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0011"/>
@@ -47117,7 +47103,7 @@ bildet. Durch die Protuberantia mentalis sind beide Hälften der Mandibula mitei
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>22</ontology:tA2ID>
+        <ontology:ta2Id>22</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/SagittalAxis">
@@ -47683,7 +47669,7 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <rdfs:label xml:lang="de">Links</rdfs:label>
         <rdfs:label xml:lang="la">Sinister</rdfs:label>
         <ontology:definition xml:lang="de">links</ontology:definition>
-        <ontology:fMAID>30334</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma30334"/>
         <ontology:id>LO017</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0010"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0011"/>
@@ -47698,7 +47684,7 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>8</ontology:tA2ID>
+        <ontology:ta2Id>8</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/SpinaMentalisInferior">
@@ -48081,7 +48067,7 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <rdfs:label xml:lang="la">Superficialis</rdfs:label>
         <rdfs:label xml:lang="de">Superfizial</rdfs:label>
         <ontology:definition xml:lang="de">oberflächlich liegend</ontology:definition>
-        <ontology:fMAID>30330</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma30330"/>
         <ontology:id>LO035</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0010"/>
@@ -48098,7 +48084,7 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>32</ontology:tA2ID>
+        <ontology:ta2Id>32</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Superior">
@@ -48109,8 +48095,8 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <rdfs:label xml:lang="en">Superior</rdfs:label>
         <rdfs:label xml:lang="la">Superior</rdfs:label>
         <ontology:definition xml:lang="de">zum Kopfende hin</ontology:definition>
-        <ontology:fMAID>30337</ontology:fMAID>
-        <ontology:fMAID>74538</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma30337"/>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74538"/>
         <ontology:id>LO012</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -48128,8 +48114,8 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>18</ontology:tA2ID>
-        <ontology:tA2ID>20</ontology:tA2ID>
+        <ontology:ta2Id>18</ontology:ta2Id>
+        <ontology:ta2Id>20</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Superolateral">
@@ -48760,7 +48746,7 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <rdfs:label xml:lang="en">Tibial</rdfs:label>
         <rdfs:label xml:lang="la">Tibialis</rdfs:label>
         <ontology:definition xml:lang="de">zur Tibia (Schienbein) hin</ontology:definition>
-        <ontology:fMAID>74556</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74556"/>
         <ontology:id>LO028</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -48778,7 +48764,7 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>41</ontology:tA2ID>
+        <ontology:ta2Id>41</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/TransverseAxis">
@@ -49119,7 +49105,7 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <rdfs:label xml:lang="en">Ulnar</rdfs:label>
         <rdfs:label xml:lang="la">Ulnaris</rdfs:label>
         <ontology:definition xml:lang="de">zur Ulna (Elle) hin</ontology:definition>
-        <ontology:fMAID>74553</ontology:fMAID>
+        <ontology:fmaId rdf:resource="http://purl.org/sig/ont/fma/fma74553"/>
         <ontology:id>LO023</ontology:id>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0001"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0002"/>
@@ -49137,7 +49123,7 @@ sonst 7, 076 ∗ [id−gn] ∗ 0)
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0024"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0031"/>
         <ontology:source rdf:resource="https://annosaxfdm.de/ontology/SO0032"/>
-        <ontology:tA2ID>39</ontology:tA2ID>
+        <ontology:ta2Id>39</ontology:ta2Id>
         <ontology:type>Body</ontology:type>
     </rdf:Description>
     <rdf:Description rdf:about="https://annosaxfdm.de/ontology/Vertebra">
