@@ -110,26 +110,31 @@
 
 :fdiCodeShape a sh:PropertyShape;
 	sh:path :fdiCode;
-	sh:minCount 1;
-    sh:targetNode [ sh:not [ sh:hasValue :DensPermanens ] ].
+	sh:minCount 1.
 
 :ToothShape a sh:NodeShape;
 	sh:targetClass :ToothClass;
 	sh:disjoint :BoneShape;
-	sh:property :labelShape,
-		:idShape,
-		:sourceShape,
-		:definitionShape,
-		:boneAffixShape,
-		:visualDefinitionShape,
-		:universalNumberingSystemShape,
-		:fdiCodeShape,
-		[sh:path :fmaId],
-		[sh:path :ta2Id],
-		[sh:path skos:closeMatch],
-		[sh:path skos:exactMatch];
-	sh:closed true;
-	sh:ignoredProperties :ignoredProperties.
+	# :DensPermanens as superclass does not have an FDI code
+	sh:xone (
+		[ sh:hasValue :DensPermanens ]
+		[
+			sh:property :labelShape,
+				:idShape,
+				:sourceShape,
+				:definitionShape,
+				:boneAffixShape,
+				:visualDefinitionShape,
+				:universalNumberingSystemShape,
+				:fdiCodeShape,
+				[sh:path :fmaId],
+				[sh:path :ta2Id],
+				[sh:path skos:closeMatch],
+				[sh:path skos:exactMatch];
+				sh:closed true;
+				sh:ignoredProperties :ignoredProperties
+		]
+	).
 
 #### Phenotype ###################################################################
 :accuracyShape a sh:PropertyShape;
