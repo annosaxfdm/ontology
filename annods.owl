@@ -11,7 +11,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:ontology="https://annosaxfdm.de/ontology/">
-    <owl:Ontology rdf:about="https://annosaxfdm.de/ontology"/>
+    <owl:Ontology rdf:about="https://annosaxfdm.de/ontology/"/>
     
 
 
