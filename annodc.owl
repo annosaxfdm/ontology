@@ -7,11 +7,38 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:fma="http://purl.org/sig/ont/fma/"
      xmlns:gfo="http://www.onto-med.de/ontologies/gfo.owl#"
-	 xmlns:skos="http://www.w3.org/2004/02/skos/core#"	
-	 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
 
    <owl:Ontology rdf:about="https://annosaxfdm.de/ontology/">
         <owl:versionInfo>2023-08-24</owl:versionInfo>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-24</dct:created>
+        <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/published"/>
+        <rdfs:seeAlso rdf:resource="https://zenodo.org/record/8380382"/>
+        <rdfs:label xml:lang="en">Anthropological Notation Ontology</rdfs:label>
+        <dct:abstract xml:lang="en">The Anthropological Notation Ontology (ANNO) allows the systematic and standardized classification of recovered bone finds into the skeletal system, the description of the skeletal pieces, and the definition of functions for the derivation of different phenotypes of humans in forensic and historical anthropology. ANNO consists of two components: ANNOdc, a domain-core ontology providing core entities such as basic anatomical categories, and ANNOds, a domain-specific ontology used for annotating structures of the human skeleton. ANNO is integrated into AnthroWorks3D, a photogrammetry pipeline and application for the creation and analysis of 3D-models of human skeletal remains. The integration is based on the three-ontology method with the General Formal Ontology as the top-level ontology, ANNOdc as the task ontology and ANNOds as the domain ontology. Thus, AnthroWorks3D only needs to implement access to the entities (classes and properties) of the task ontology, whereas the entities of the corresponding domain ontology are imported dynamically. ANNO supports the analysis of skeletal and bone finds in forensic and historical anthropology, facilitating the standardization of data annotation and ensuring accurate preservation of information for posterity.</dct:abstract>
+        <dct:description xml:lang="en">The Anthropological Notation Ontology (ANNO) allows the systematic and standardized classification of recovered bone finds into the skeletal system, the description of the skeletal pieces, and the definition of functions for the derivation of different phenotypes of humans in forensic and historical anthropology.</dct:description>
+        <dct:description xml:lang="de">Ziel des SaxFDM-Fokusprojektes ist die Entwicklung einer Ontologie für die einheitliche Einordnung der Knochenfunde aus den Ausgrabungen in das Skelettsystem, die Beschreibung der Skelettstücke sowie die Definition von Funktionen zur Ableitung verschiedener Phänotypen des Menschen. Die Ontologie soll in einem Terminologieservice verwaltet werden, der sich mit denen der NFDI synchronisieren kann.</dct:description>
+        <dct:title xml:lang="en">The ANthropological Notation Ontology (ANNO): A core ontology for annotating human bones and deriving phenotypes</dct:title>
+        <doap:repository rdf:resource="https://github.com/annosaxfdm/ontology"/>
+        <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dct:publisher rdf:resource="https://www.imise.uni-leipzig.de"/>
+        <dct:creator><![CDATA[<a href='https://www.imise.uni-leipzig.de/en/Mitarbeiter/Alexandr_Uciteli'>Alexandr Uciteli</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a>]]></dct:creator>
+        <dct:creator><![CDATA[<a href='https://www.cb.hs-mittweida.de/professoren-innen/forensik/prof-labudde/'>Dirk Labudde</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a>]]></dct:creator>
+        <dct:creator><![CDATA[<a href='https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise/'>Marie Heuschkel</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a>]]></dct:creator>
+        <dct:creator><![CDATA[<a href='https://github.com/KonradHoeffner'>Konrad Höffner</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a>]]></dct:creator>
+        <dct:creator>Fabian Schmiedel</dct:creator>
+        <dct:contributor>Andy Ludwig</dct:contributor>
+        <dct:contributor>Marleen Mohaupt</dct:contributor>
+        <vann:preferredNamespaceURI>https://annosaxfdm.de/ontology/</vann:preferredNamespaceURI>
+        <vann:preferredNamespacePrefix>anno</vann:preferredNamespacePrefix>
+        <foaf:homepage>https://annosaxfdm.de/</foaf:homepage>
+        <foaf:logo>https://annosaxfdm.imise.uni-leipzig.de/public/anno-logo-blue.svg</foaf:logo>
     </owl:Ontology>
 
     <!--
