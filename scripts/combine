@@ -5,7 +5,8 @@ ROOT=`( cd "$SCRIPT_PATH/.." && pwd )`
 DIST=$ROOT/dist
 mkdir -p $ROOT/dist
 rapper -i rdfxml $ROOT/annodc.owl -o ntriples > /tmp/annodc.nt
-rapper -i rdfxml $ROOT/annods.owl -o ntriples > /tmp/annods.nt
+# prevent errors through overlapping blank node identifiers
+rapper -i rdfxml $ROOT/annods.owl -o ntriples | sed "s/genid/schmenid/g"> /tmp/annods.nt
 # workaround for spaces in URIs
 cat $SCRIPT_PATH/prefix.ttl /tmp/annodc.nt /tmp/annods.nt \
 | sed  "s/\\\u0020/%20/g" \
