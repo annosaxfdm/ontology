@@ -8,12 +8,20 @@
 ANNO consists of ANNOdc (domain-core) and ANNOds (domain-specific).
 ANNOdc is connected to the General Formal Ontology (GFO).
 
+## Files
+
+The [master](https://github.com/annosaxfdm/ontology/tree/master) branch contains the newest versions of [ANNOdc](annodc.owl) and [ANNOds](annods.owl).
+RDF Turtle serializations are available in the [dist](https://github.com/annosaxfdm/ontology/tree/dist) branch:
+
+* [anno.ttl](https://github.com/annosaxfdm/ontology/blob/dist/anno.ttl) combination of ANNOdc and ANNOds
+* [anno-ols.ttl](https://github.com/annosaxfdm/ontology/blob/dist/anno-ols.ttl) combination with language tags removed, use this only with OLS 2
+* [shacl.ttl](https://github.com/annosaxfdm/ontology/blob/dist/shacl.ttl) SHACL shapes for validation
+
 ## Releases
 
 Releases have the [calendar versioning](https://calver.org/) scheme YY.MM for short year and short month.
-For example, [23.08](https://github.com/annosaxfdm/ontology/releases/tag/23.08) is the state of August, 2023 and contains the ontology as <https://github.com/annosaxfdm/ontology/releases/download/23.08/anno.owl>.
-Each release *must* include `anno.owl` as attached binary, leading to the dynamic link to the newest version at <https://github.com/annosaxfdm/ontology/releases/latest/download/anno.owl>.
-Each release *must not* be set as pre-release because that breaks the GitHub shorthand link.
+For example, [23.08](https://github.com/annosaxfdm/ontology/releases/tag/23.11) is the state of November 2023 and contains the ontology as <https://github.com/annosaxfdm/ontology/releases/download/23.11/anno.ttl>.
+You can also use the dynamic link to the newest version at <https://github.com/annosaxfdm/ontology/releases/latest/download/anno.ttl>.respectively [anno-ols.ttl](https://github.com/annosaxfdm/ontology/releases/latest/download/anno-ols.ttl).
 
 ## Validation
 
