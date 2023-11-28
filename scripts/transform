@@ -13,7 +13,7 @@ sed -i -e ':loop' -e 's|\(rdfs:label "[^"]+"[^"]*\),|\1 ;\n    rdfs:label|g' -e 
 sed -i 's|rdfs:label\( "[^"]+\)"@la ;|skos:altLabel\1 (la)";|' $TARGET
 sed -i 's|rdfs:label\( "[^"]+\)"@de ;|skos:altLabel\1 (de)";|' $TARGET
 # remove language tags that aren't English and add tag at the end
-sed -i 's|\("[^"]+\)"@la|\1 (la)"|' $TARGET
-sed -i 's|\("[^"]+\)"@de|\1 (de)"|' $TARGET
+sed -i 's|\("[^"]+\)"@la|\1 (la)"|g' $TARGET
+sed -i 's|\("[^"]+\)"@de|\1 (de)"|g' $TARGET
 # prevent English language tag literals from hiding ones without one
 sed -i 's|@en||' $TARGET
