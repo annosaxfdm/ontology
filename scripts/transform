@@ -1,0 +1,19 @@
+# work around the missing multi language support of OLS
+
+SCRIPT_PATH=`dirname "$0"` 
+ROOT=`( cd "$SCRIPT_PATH/.." && pwd )`   
+DIST=$ROOT/dist
+SOURCE=$DIST/anno.ttl
+TARGET=$DIST/anno-ols.ttl
+
+cp $SOURCE $TARGET
+# for easier substitution break apart turtle value lists
+sed -i -e ':loop' -e 's|\(rdfs:label "[^"]+"[^"]*\),|\1 ;\n    rdfs:label|g' -e 't loop' $TARGET
+# OLS can only display one label which it expects to be English, other labels need to be synonyms
+sed -i 's|rdfs:label\( "[^"]+\)"@la ;|skos:altLabel\1 (la)";|' $TARGET
+sed -i 's|rdfs:label\( "[^"]+\)"@de ;|skos:altLabel\1 (de)";|' $TARGET
+# remove language tags that aren't English and add tag at the end
+sed -i 's|\("[^"]+\)"@la|\1 (la)"|' $TARGET
+sed -i 's|\("[^"]+\)"@de|\1 (de)"|' $TARGET
+# prevent English language tag literals from hiding ones without one
+sed -i 's|@en||' $TARGET
