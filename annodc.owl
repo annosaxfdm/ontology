@@ -212,7 +212,7 @@
     <!-- https://annosaxfdm.de/ontology/AnatomicalLine -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalLine">
-        <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/9657"/>
+        <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/fma9657"/>
         <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#LineRegion"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"/>
         <rdfs:subClassOf>
@@ -231,7 +231,7 @@
     <!-- https://annosaxfdm.de/ontology/AnatomicalPlane -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalPlane">
-        <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/242982"/>
+        <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/fma242982"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/AnatomicalSurface"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -248,7 +248,7 @@
     <!-- https://annosaxfdm.de/ontology/AnatomicalPoint -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalPoint">
-        <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/9658"/>
+        <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/fma9658"/>
         <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#PointRegion"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"/>
         <rdfs:subClassOf>
@@ -298,7 +298,7 @@
     <!-- https://annosaxfdm.de/ontology/AnatomicalStructure -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalStructure">
-        <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/67165"/>
+        <owl:equivalentClass rdf:resource="http://purl.org/sig/ont/fma/fma67165"/>
         <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#MaterialObject"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/AnatomicalEntity"/>
         <rdfs:subClassOf>
