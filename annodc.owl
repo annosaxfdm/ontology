@@ -16,7 +16,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
 
    <owl:Ontology rdf:about="https://annosaxfdm.de/ontology/">
-        <owl:versionInfo>2023-08-24</owl:versionInfo>
+        <owl:versionInfo>2024-02-15</owl:versionInfo>
         <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-24</dct:created>
         <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/published"/>
         <rdfs:seeAlso rdf:resource="https://zenodo.org/record/8380382"/>
