@@ -1,0 +1,930 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://annosaxfdm.de/ontology/AnatomicalEntity"
+    }, {
+      "@id" : "https://annosaxfdm.de/ontology/AnatomicalProperty"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#occupies"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalSpace"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#boundaryOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalSpace"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#hasPart"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid13"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://annosaxfdm.de/ontology/Bone"
+    }, {
+      "@id" : "https://annosaxfdm.de/ontology/BoneCompound"
+    }, {
+      "@id" : "https://annosaxfdm.de/ontology/BonePart"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/Bone"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#partOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/derivedFrom"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid19"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://annosaxfdm.de/ontology/AnatomicalEntity"
+    }, {
+      "@id" : "https://annosaxfdm.de/ontology/AnatomicalProperty"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalEntity"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/locationOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalEntity"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/relativeTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid28"
+    }, {
+      "@id" : "_:genid26"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#hasPart"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/ToothStructure"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#hasPart"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/BoneStructure"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/spatialEntityOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalStructure"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/Tooth"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#partOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/locatedOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/BoneStructure"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/RelativeAnatomicalLocation"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/hasDirection"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#boundaryOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalSurface"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalAxis"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#hasBoundary"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#boundaryOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalLine"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalStructure"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#propertyOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#occupiedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalStructure"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/ontology/bibo/status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceURI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://usefulinc.com/ns/doap#repository",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#Attributive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#LineRegion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#MaterialObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#PointRegion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#Relator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#SpaceEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#SpaceRegion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#SurfaceRegion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#boundaryOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#hasBoundary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#hasPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#occupiedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#occupies",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#partOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.onto-med.de/ontologies/gfo.owl#propertyOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#related",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/logo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "en",
+    "@value" : "The Anthropological Notation Ontology (ANNO) allows the systematic and standardized classification of recovered bone finds into the skeletal system, the description of the skeletal pieces, and the definition of functions for the derivation of different phenotypes of humans in forensic and historical anthropology. ANNO consists of two components: ANNOdc, a domain-core ontology providing core entities such as basic anatomical categories, and ANNOds, a domain-specific ontology used for annotating structures of the human skeleton. ANNO is integrated into AnthroWorks3D, a photogrammetry pipeline and application for the creation and analysis of 3D-models of human skeletal remains. The integration is based on the three-ontology method with the General Formal Ontology as the top-level ontology, ANNOdc as the task ontology and ANNOds as the domain ontology. Thus, AnthroWorks3D only needs to implement access to the entities (classes and properties) of the task ontology, whereas the entities of the corresponding domain ontology are imported dynamically. ANNO supports the analysis of skeletal and bone finds in forensic and historical anthropology, facilitating the standardization of data annotation and ensuring accurate preservation of information for posterity."
+  } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Andy Ludwig"
+  }, {
+    "@value" : "Marleen Mohaupt"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2023-08-24"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "<a href='https://github.com/KonradHoeffner'>Konrad Höffner</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a>"
+  }, {
+    "@value" : "<a href='https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise/'>Marie Heuschkel</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a>"
+  }, {
+    "@value" : "<a href='https://www.cb.hs-mittweida.de/professoren-innen/forensik/prof-labudde/'>Dirk Labudde</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a>"
+  }, {
+    "@value" : "<a href='https://www.imise.uni-leipzig.de/en/Mitarbeiter/Alexandr_Uciteli'>Alexandr Uciteli</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a>"
+  }, {
+    "@value" : "Fabian Schmiedel"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "The Anthropological Notation Ontology (ANNO) allows the systematic and standardized classification of recovered bone finds into the skeletal system, the description of the skeletal pieces, and the definition of functions for the derivation of different phenotypes of humans in forensic and historical anthropology."
+  }, {
+    "@language" : "de",
+    "@value" : "Ziel des SaxFDM-Fokusprojektes ist die Entwicklung einer Ontologie für die einheitliche Einordnung der Knochenfunde aus den Ausgrabungen in das Skelettsystem, die Beschreibung der Skelettstücke sowie die Definition von Funktionen zur Ableitung verschiedener Phänotypen des Menschen. Die Ontologie soll in einem Terminologieservice verwaltet werden, der sich mit denen der NFDI synchronisieren kann."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@id" : "https://www.imise.uni-leipzig.de"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "The ANthropological Notation Ontology (ANNO): A core ontology for annotating human bones and deriving phenotypes"
+  } ],
+  "http://purl.org/ontology/bibo/status" : [ {
+    "@id" : "http://purl.org/ontology/bibo/status/published"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "anno"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceURI" : [ {
+    "@value" : "https://annosaxfdm.de/ontology/"
+  } ],
+  "http://usefulinc.com/ns/doap#repository" : [ {
+    "@id" : "https://github.com/annosaxfdm/ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Anthropological Notation Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://ols.imise.uni-leipzig.de/ontologies/anno"
+  }, {
+    "@id" : "https://zenodo.org/record/8380382"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "2024-02-15"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@value" : "https://annosaxfdm.de/"
+  } ],
+  "http://xmlns.com/foaf/0.1/logo" : [ {
+    "@value" : "https://annosaxfdm.imise.uni-leipzig.de/public/anno-logo-blue.svg"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/AnatomicalAxis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Anatomical axes are lines around which an organism is approximately symmetrical."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Anatomical axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalLine"
+  }, {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/AnatomicalEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An anatomical entity is either an anatomical structure or a spatial anatomical entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Anatomical entity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.org/sig/ont/fma/fma61775"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/AnatomicalLine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An anatomical line is a boundary (one-dimensional) of an anatomical surface."
+  }, {
+    "@language" : "en",
+    "@value" : "An anatomical line is a conceptual, immaterial line on a bone that passes between or at multiple measurement points and is used in the form of distances, circumferences, or angles to collect measurements representing aspects of the bone’s dimensions."
+  }, {
+    "@language" : "en",
+    "@value" : "Anatomical lines can connect or pass through points on anatomical entities (e.g., an edge between two or an angle between three anatomical entities)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Anatomical line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#LineRegion"
+  }, {
+    "@id" : "https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"
+  }, {
+    "@id" : "_:genid5"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.org/sig/ont/fma/fma9657"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/AnatomicalPlane",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An anatomical plane is a hypothetical plane that transects the body to describe the location of structures or the direction of movements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Anatomical plane"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalSurface"
+  }, {
+    "@id" : "_:genid6"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.org/sig/ont/fma/fma242982"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/AnatomicalPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An anatomical point is a boundary (zero-dimensional) of an anatomical line."
+  }, {
+    "@language" : "en",
+    "@value" : "An osteometric landmark or anatomical point is any immaterial, conceptual point that marks a location on a bone, either to create measurements (anatomical lines) or align the bone in specific planes for a measurement. The former serve as measurement points, the latter as orientation points."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Anatomical point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#PointRegion"
+  }, {
+    "@id" : "https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"
+  }, {
+    "@id" : "_:genid7"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.org/sig/ont/fma/fma9658"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/AnatomicalProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An anatomical property is a characteristic (e.g., shape) of an anatomical structure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Anatomical property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#Attributive"
+  }, {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/AnatomicalSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An anatomical space is a space region (three-dimensional) occupied by a material anatomical object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Anatomical space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#SpaceRegion"
+  }, {
+    "@id" : "https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"
+  }, {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/AnatomicalStructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Anatomical structures in the anthropological context are material anatomical entities: tooth structures (teeth and teeth parts), bone structures (single bones, bone parts and bone compounds), as well as the complete skeleton."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Anatomical structure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#MaterialObject"
+  }, {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalEntity"
+  }, {
+    "@id" : "_:genid10"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.org/sig/ont/fma/fma67165"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/AnatomicalSurface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An anatomical surface is a boundary (two-dimensional) of an anatomical space."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Anatomical surface"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#SurfaceRegion"
+  }, {
+    "@id" : "https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"
+  }, {
+    "@id" : "_:genid11"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.org/sig/ont/fma/fma24137"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/Bone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A bone is a skeletal element, i.e. a single self-contained bony entity. Bones, such as Radius and Ulna are individual bone organs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/BoneStructure"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.org/sig/ont/fma/fma5018"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/BoneCompound",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A bone compound is a composite structure consisting of further bone compounds, individual bones or bone parts."
+  }, {
+    "@language" : "en",
+    "@value" : "A bone compound is a section of the skeleton combining multiple bones or bone parts together, depending on the classification system chosen. This allows for the representation of any partonomy that need not necessarily be compatible with one another."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bone compound"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/BoneStructure"
+  }, {
+    "@id" : "_:genid12"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "http://purl.org/sig/ont/fma/fma23881"
+  }, {
+    "@id" : "http://purl.org/sig/ont/fma/fma85544"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/BonePart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A bone part is a part of a single bone (e.g., bony processes or bony prominences)."
+  }, {
+    "@language" : "en",
+    "@value" : "An anatomical landmark is any distinct structure on a bone. In ANNO, it is also referred to as a 'bone part'."
+  }, {
+    "@language" : "en",
+    "@value" : "On the skeletal level, bone parts comprise any piece or portion of a bone."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bone part"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/BoneStructure"
+  }, {
+    "@id" : "_:genid17"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "http://purl.org/sig/ont/fma/fma10483"
+  }, {
+    "@id" : "http://purl.org/sig/ont/fma/fma281808"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/BoneStructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A bone structure is either a single bone or a bone part or a bone compound."
+  }, {
+    "@language" : "en",
+    "@value" : "Bone structures comprise all possible parts of the human skeleton, which are individual bones, bone parts, bone compounds as well as the complete skeleton excluding the teeth."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bone structure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalStructure"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/MeasurementPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Measurement point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalPoint"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/OrientationPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Orientation point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalPoint"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/Phenotype",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A phenotype is a (combination of) bodily feature(s) or observable characteristic(s) of an organism."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Phenotype"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#Attributive"
+  }, {
+    "@id" : "_:genid18"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/RelativeAnatomicalLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relative anatomical location is a position of an anatomical entity (e.g., a bone object) in relation to another anatomical entity (e.g., another bone, an axis, a plane or a point such as the centre of the body). Relative anatomical locations are classified according to the anatomical terms of location (e.g., cranial = 'towards the end of the skull' or dexter = 'right')."
+  }, {
+    "@language" : "en",
+    "@value" : "The position of all anatomical structures is described in a standardised fashion using conceptual axes (a kind of anatomical lines), planes (a kind of anatomical surfaces) as well as directions (relative anatomical locations) relative to the body based on the standard anatomical position which refers to standing upright, facing forward, palms and toes pointing forward, thumbs to the side, and observed from the perspective of the respective individual."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Relative anatomical location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#Relator"
+  }, {
+    "@id" : "_:genid22"
+  }, {
+    "@id" : "_:genid23"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.org/sig/ont/fma/fma30346"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/Skeleton",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The largest or most comprehensive anatomical structure, the human skeleton is the framework composed of all the bones and the teeth of a human being."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Skeleton"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalStructure"
+  }, {
+    "@id" : "_:genid24"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/SpatialAnatomicalEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A spatial anatomical entity is either an anatomical space (three-dimensional) or an anatomical surface (two-dimensional) or an anatomical line (one-dimensional) or an anatomical point (zero-dimensional)."
+  }, {
+    "@language" : "en",
+    "@value" : "An (immaterial) anatomical entity without mass is classified as a spatial anatomical entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Spatial anatomical entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#SpaceEntity"
+  }, {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalEntity"
+  }, {
+    "@id" : "_:genid29"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.org/sig/ont/fma/fma67112"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/Tooth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A human tooth is the individual entity of the human dentition or the teeth as a whole. Teeth are parts of the skeleton, yet they are characterised by their own distinctive tissue and thus treated separately from bones. Teeth, such as the Dens caninus (canine tooth) are located on bone structures."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tooth"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/ToothStructure"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.org/sig/ont/fma/fma12516"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/ToothPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A tooth part is a part of a single tooth."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tooth part"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/ToothStructure"
+  }, {
+    "@id" : "_:genid30"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/ToothStructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A tooth structure is either a single tooth or a tooth part."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tooth structure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalStructure"
+  }, {
+    "@id" : "_:genid31"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/derivedFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/Phenotype"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/directionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/locationOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/hasDirection"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/endsOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalLine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#hasBoundary"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/hasDirection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/hasLocation"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/hasLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/RelativeAnatomicalLocation"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/locationOf"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/hasValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/locatedOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/ToothStructure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/BoneStructure"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/locationOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/RelativeAnatomicalLocation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalEntity"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/passesThrough",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalLine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#hasBoundary"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/relativeTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/RelativeAnatomicalLocation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalEntity"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/spatialEntityOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalStructure"
+  } ]
+}, {
+  "@id" : "https://annosaxfdm.de/ontology/startsOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalLine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://annosaxfdm.de/ontology/AnatomicalPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.onto-med.de/ontologies/gfo.owl#hasBoundary"
+  } ]
+} ]

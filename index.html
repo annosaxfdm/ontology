@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>The ANthropological Notation Ontology (ANNO): A core ontology for annotating human bones and deriving phenotypes</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://annosaxfdm.de/ontology/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://annosaxfdm.de/ontology/","name":"The ANthropological Notation Ontology (ANNO): A core ontology for annotating human bones and deriving phenotypes", "headline":"The Anthropological Notation Ontology (ANNO) allows the systematic and standardized classification of recovered bone finds into the skeletal system, the description of the skeletal pieces, and the definition of functions for the derivation of different phenotypes of humans in forensic and historical anthropology. ANNO consists of two components: ANNOdc, a domain-core ontology providing core entities such as basic anatomical categories, and ANNOds, a domain-specific ontology used for annotating structures of the human skeleton. ANNO is integrated into AnthroWorks3D, a photogrammetry pipeline and application for the creation and analysis of 3D-models of human skeletal remains. The integration is based on the three-ontology method with the General Formal Ontology as the top-level ontology, ANNOdc as the task ontology and ANNOds as the domain ontology. Thus, AnthroWorks3D only needs to implement access to the entities (classes and properties) of the task ontology, whereas the entities of the corresponding domain ontology are imported dynamically. ANNO supports the analysis of skeletal and bone finds in forensic and historical anthropology, facilitating the standardization of data annotation and ensuring accurate preservation of information for posterity.", "dateReleased":"2023-08-24", "version":"2024-02-15", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"<a href='https://github.com/KonradHoeffner'>Konrad Höffner</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a>"},{"@type":"Person","name":"<a href='https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise/'>Marie Heuschkel</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a>"},{"@type":"Person","name":"<a href='https://www.cb.hs-mittweida.de/professoren-innen/forensik/prof-labudde/'>Dirk Labudde</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a>"},{"@type":"Person","name":"<a href='https://www.imise.uni-leipzig.de/en/Mitarbeiter/Alexandr_Uciteli'>Alexandr Uciteli</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a>"},{"@type":"Person","name":"Fabian Schmiedel"}], "contributor":[{"@type":"Person","name":"Andy Ludwig"},{"@type":"Person","name":"Marleen Mohaupt"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The ANthropological Notation Ontology (ANNO): A core ontology for annotating human bones and deriving phenotypes</h1>
+<img src="https://annosaxfdm.imise.uni-leipzig.de/public/anno-logo-blue.svg" width="50/">
+<h2>Release: 2023-08-24</h2>
+
+
+<dl>
+<dt>Revision:</dt>
+<dd>2024-02-15</dd>
+<dt>Authors:</dt>
+<dd><a href='https://github.com/KonradHoeffner'>Konrad Höffner</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a></dd><dd><a href='https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise/'>Marie Heuschkel</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a></dd><dd><a href='https://www.cb.hs-mittweida.de/professoren-innen/forensik/prof-labudde/'>Dirk Labudde</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a></dd><dd><a href='https://www.imise.uni-leipzig.de/en/Mitarbeiter/Alexandr_Uciteli'>Alexandr Uciteli</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a></dd><dd>Fabian Schmiedel</dd>
+
+<dt>Contributors:</dt>
+<dd>Andy Ludwig</dd><dd>Marleen Mohaupt</dd>
+
+<dt>Publisher:</dt>
+<dd><a href="https://www.imise.uni-leipzig.de">https://www.imise.uni-leipzig.de</a></dd>
+<dt>See also:</dt>
+<dd><a href="https://ols.imise.uni-leipzig.de/ontologies/anno">https://ols.imise.uni-leipzig.de/ontologies/anno</a></dd><dd><a href="https://zenodo.org/record/8380382">https://zenodo.org/record/8380382</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd><a href='https://github.com/KonradHoeffner'>Konrad Höffner</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a>, <a href='https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise/'>Marie Heuschkel</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a>, <a href='https://www.cb.hs-mittweida.de/professoren-innen/forensik/prof-labudde/'>Dirk Labudde</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a>, <a href='https://www.imise.uni-leipzig.de/en/Mitarbeiter/Alexandr_Uciteli'>Alexandr Uciteli</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a>, Fabian Schmiedel. The ANthropological Notation Ontology (ANNO): A core ontology for annotating human bones and deriving phenotypes. Revision: 2024-02-15.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>published</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The Anthropological Notation Ontology (ANNO) allows the systematic and standardized classification of recovered bone finds into the skeletal system, the description of the skeletal pieces, and the definition of functions for the derivation of different phenotypes of humans in forensic and historical anthropology. ANNO consists of two components: ANNOdc, a domain-core ontology providing core entities such as basic anatomical categories, and ANNOds, a domain-specific ontology used for annotating structures of the human skeleton. ANNO is integrated into AnthroWorks3D, a photogrammetry pipeline and application for the creation and analysis of 3D-models of human skeletal remains. The integration is based on the three-ontology method with the General Formal Ontology as the top-level ontology, ANNOdc as the task ontology and ANNOds as the domain ontology. Thus, AnthroWorks3D only needs to implement access to the entities (classes and properties) of the task ontology, whereas the entities of the corresponding domain ontology are imported dynamically. ANNO supports the analysis of skeletal and bone finds in forensic and historical anthropology, facilitating the standardization of data annotation and ensuring accurate preservation of information for posterity.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>anno</b></td><td>&lt;https://annosaxfdm.de/ontology/&gt;</td></tr>
+<tr><td><b>bibo</b></td><td>&lt;http://purl.org/ontology/bibo/&gt;</td></tr>
+<tr><td><b>dct</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>doap</b></td><td>&lt;http://usefulinc.com/ns/doap#&gt;</td></tr>
+<tr><td><b>fma</b></td><td>&lt;http://purl.org/sig/ont/fma/&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1/&gt;</td></tr>
+<tr><td><b>gfo</b></td><td>&lt;http://www.onto-med.de/ontologies/gfo.owl#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Anthropological Notation Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AnatomicalAxis" title="https://annosaxfdm.de/ontology/AnatomicalAxis">Anatomical axis</a>
+   </li>
+   <li>
+      <a href="#AnatomicalEntity" title="https://annosaxfdm.de/ontology/AnatomicalEntity">Anatomical entity</a>
+   </li>
+   <li>
+      <a href="#AnatomicalLine" title="https://annosaxfdm.de/ontology/AnatomicalLine">Anatomical line</a>
+   </li>
+   <li>
+      <a href="#AnatomicalPlane" title="https://annosaxfdm.de/ontology/AnatomicalPlane">Anatomical plane</a>
+   </li>
+   <li>
+      <a href="#AnatomicalPoint" title="https://annosaxfdm.de/ontology/AnatomicalPoint">Anatomical point</a>
+   </li>
+   <li>
+      <a href="#AnatomicalProperty"
+         title="https://annosaxfdm.de/ontology/AnatomicalProperty">Anatomical property</a>
+   </li>
+   <li>
+      <a href="#AnatomicalSpace" title="https://annosaxfdm.de/ontology/AnatomicalSpace">Anatomical space</a>
+   </li>
+   <li>
+      <a href="#AnatomicalStructure"
+         title="https://annosaxfdm.de/ontology/AnatomicalStructure">Anatomical structure</a>
+   </li>
+   <li>
+      <a href="#AnatomicalSurface" title="https://annosaxfdm.de/ontology/AnatomicalSurface">Anatomical surface</a>
+   </li>
+   <li>
+      <a href="#Bone" title="https://annosaxfdm.de/ontology/Bone">Bone</a>
+   </li>
+   <li>
+      <a href="#BoneCompound" title="https://annosaxfdm.de/ontology/BoneCompound">Bone compound</a>
+   </li>
+   <li>
+      <a href="#BonePart" title="https://annosaxfdm.de/ontology/BonePart">Bone part</a>
+   </li>
+   <li>
+      <a href="#BoneStructure" title="https://annosaxfdm.de/ontology/BoneStructure">Bone structure</a>
+   </li>
+   <li>
+      <a href="#MeasurementPoint" title="https://annosaxfdm.de/ontology/MeasurementPoint">Measurement point</a>
+   </li>
+   <li>
+      <a href="#OrientationPoint" title="https://annosaxfdm.de/ontology/OrientationPoint">Orientation point</a>
+   </li>
+   <li>
+      <a href="#Phenotype" title="https://annosaxfdm.de/ontology/Phenotype">Phenotype</a>
+   </li>
+   <li>
+      <a href="#RelativeAnatomicalLocation"
+         title="https://annosaxfdm.de/ontology/RelativeAnatomicalLocation">Relative anatomical location</a>
+   </li>
+   <li>
+      <a href="#Skeleton" title="https://annosaxfdm.de/ontology/Skeleton">Skeleton</a>
+   </li>
+   <li>
+      <a href="#SpatialAnatomicalEntity"
+         title="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity">Spatial anatomical entity</a>
+   </li>
+   <li>
+      <a href="#Tooth" title="https://annosaxfdm.de/ontology/Tooth">Tooth</a>
+   </li>
+   <li>
+      <a href="#ToothPart" title="https://annosaxfdm.de/ontology/ToothPart">Tooth part</a>
+   </li>
+   <li>
+      <a href="#ToothStructure" title="https://annosaxfdm.de/ontology/ToothStructure">Tooth structure</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#derivedFrom" title="https://annosaxfdm.de/ontology/derivedFrom">
+         <span>derived from</span>
+      </a>
+   </li>
+   <li>
+      <a href="#directionOf" title="https://annosaxfdm.de/ontology/directionOf">
+         <span>direction of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#endsOn" title="https://annosaxfdm.de/ontology/endsOn">
+         <span>ends on</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasDirection" title="https://annosaxfdm.de/ontology/hasDirection">
+         <span>has direction</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasLocation" title="https://annosaxfdm.de/ontology/hasLocation">
+         <span>has location</span>
+      </a>
+   </li>
+   <li>
+      <a href="#locatedOn" title="https://annosaxfdm.de/ontology/locatedOn">
+         <span>located on</span>
+      </a>
+   </li>
+   <li>
+      <a href="#locationOf" title="https://annosaxfdm.de/ontology/locationOf">
+         <span>location of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#passesThrough" title="https://annosaxfdm.de/ontology/passesThrough">
+         <span>passes through</span>
+      </a>
+   </li>
+   <li>
+      <a href="#relativeTo" title="https://annosaxfdm.de/ontology/relativeTo">
+         <span>relative to</span>
+      </a>
+   </li>
+   <li>
+      <a href="#spatialEntityOf" title="https://annosaxfdm.de/ontology/spatialEntityOf">
+         <span>spatial entity of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#startsOn" title="https://annosaxfdm.de/ontology/startsOn">
+         <span>starts on</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasValue" title="https://annosaxfdm.de/ontology/hasValue">
+         <span>has value</span>
+      </a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Anthropological Notation Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">The Anthropological Notation Ontology (ANNO) allows the systematic and standardized classification of recovered bone finds into the skeletal system, the description of the skeletal pieces, and the definition of functions for the derivation of different phenotypes of humans in forensic and historical anthropology.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Anthropological Notation Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Anthropological Notation Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AnatomicalAxis" title="https://annosaxfdm.de/ontology/AnatomicalAxis">Anatomical axis</a>
+      </li>
+      <li>
+         <a href="#AnatomicalEntity" title="https://annosaxfdm.de/ontology/AnatomicalEntity">Anatomical entity</a>
+      </li>
+      <li>
+         <a href="#AnatomicalLine" title="https://annosaxfdm.de/ontology/AnatomicalLine">Anatomical line</a>
+      </li>
+      <li>
+         <a href="#AnatomicalPlane" title="https://annosaxfdm.de/ontology/AnatomicalPlane">Anatomical plane</a>
+      </li>
+      <li>
+         <a href="#AnatomicalPoint" title="https://annosaxfdm.de/ontology/AnatomicalPoint">Anatomical point</a>
+      </li>
+      <li>
+         <a href="#AnatomicalProperty"
+            title="https://annosaxfdm.de/ontology/AnatomicalProperty">Anatomical property</a>
+      </li>
+      <li>
+         <a href="#AnatomicalSpace" title="https://annosaxfdm.de/ontology/AnatomicalSpace">Anatomical space</a>
+      </li>
+      <li>
+         <a href="#AnatomicalStructure"
+            title="https://annosaxfdm.de/ontology/AnatomicalStructure">Anatomical structure</a>
+      </li>
+      <li>
+         <a href="#AnatomicalSurface" title="https://annosaxfdm.de/ontology/AnatomicalSurface">Anatomical surface</a>
+      </li>
+      <li>
+         <a href="#Bone" title="https://annosaxfdm.de/ontology/Bone">Bone</a>
+      </li>
+      <li>
+         <a href="#BoneCompound" title="https://annosaxfdm.de/ontology/BoneCompound">Bone compound</a>
+      </li>
+      <li>
+         <a href="#BonePart" title="https://annosaxfdm.de/ontology/BonePart">Bone part</a>
+      </li>
+      <li>
+         <a href="#BoneStructure" title="https://annosaxfdm.de/ontology/BoneStructure">Bone structure</a>
+      </li>
+      <li>
+         <a href="#MeasurementPoint" title="https://annosaxfdm.de/ontology/MeasurementPoint">Measurement point</a>
+      </li>
+      <li>
+         <a href="#OrientationPoint" title="https://annosaxfdm.de/ontology/OrientationPoint">Orientation point</a>
+      </li>
+      <li>
+         <a href="#Phenotype" title="https://annosaxfdm.de/ontology/Phenotype">Phenotype</a>
+      </li>
+      <li>
+         <a href="#RelativeAnatomicalLocation"
+            title="https://annosaxfdm.de/ontology/RelativeAnatomicalLocation">Relative anatomical location</a>
+      </li>
+      <li>
+         <a href="#Skeleton" title="https://annosaxfdm.de/ontology/Skeleton">Skeleton</a>
+      </li>
+      <li>
+         <a href="#SpatialAnatomicalEntity"
+            title="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity">Spatial anatomical entity</a>
+      </li>
+      <li>
+         <a href="#Tooth" title="https://annosaxfdm.de/ontology/Tooth">Tooth</a>
+      </li>
+      <li>
+         <a href="#ToothPart" title="https://annosaxfdm.de/ontology/ToothPart">Tooth part</a>
+      </li>
+      <li>
+         <a href="#ToothStructure" title="https://annosaxfdm.de/ontology/ToothStructure">Tooth structure</a>
+      </li>
+   </ul>
+   <div class="entity" id="AnatomicalAxis">
+      <h3>Anatomical axis<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/AnatomicalAxis</p>
+      <div class="comment">
+         <span class="markdown">Anatomical axes are lines around which an organism is approximately symmetrical.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AnatomicalLine" title="https://annosaxfdm.de/ontology/AnatomicalLine">Anatomical line</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AnatomicalEntity">
+      <h3>Anatomical entity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/AnatomicalEntity</p>
+      <div class="comment">
+         <span class="markdown">An anatomical entity is either an anatomical structure or a spatial anatomical entity.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AnatomicalStructure"
+               title="https://annosaxfdm.de/ontology/AnatomicalStructure">Anatomical structure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SpatialAnatomicalEntity"
+               title="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity">Spatial anatomical entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasLocation" title="https://annosaxfdm.de/ontology/hasLocation">has location</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#locationOf" title="https://annosaxfdm.de/ontology/locationOf">location of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relativeTo" title="https://annosaxfdm.de/ontology/relativeTo">relative to</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AnatomicalLine">
+      <h3>Anatomical line<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/AnatomicalLine</p>
+      <div class="comment">
+         <span class="markdown">An anatomical line is a boundary (one-dimensional) of an anatomical surface.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SpatialAnatomicalEntity"
+               title="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity">Spatial anatomical entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.onto-med.de/ontologies/gfo.owl#LineRegion"
+               target="_blank"
+               title="http://www.onto-med.de/ontologies/gfo.owl#LineRegion">line region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AnatomicalAxis" title="https://annosaxfdm.de/ontology/AnatomicalAxis">Anatomical axis</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#endsOn" title="https://annosaxfdm.de/ontology/endsOn">ends on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#passesThrough" title="https://annosaxfdm.de/ontology/passesThrough">passes through</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#startsOn" title="https://annosaxfdm.de/ontology/startsOn">starts on</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AnatomicalPlane">
+      <h3>Anatomical plane<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/AnatomicalPlane</p>
+      <div class="comment">
+         <span class="markdown">An anatomical plane is a hypothetical plane that transects the body to describe the location of structures or the direction of movements.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AnatomicalSurface" title="https://annosaxfdm.de/ontology/AnatomicalSurface">Anatomical surface</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AnatomicalPoint">
+      <h3>Anatomical point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/AnatomicalPoint</p>
+      <div class="comment">
+         <span class="markdown">An anatomical point is a boundary (zero-dimensional) of an anatomical line.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SpatialAnatomicalEntity"
+               title="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity">Spatial anatomical entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.onto-med.de/ontologies/gfo.owl#PointRegion"
+               target="_blank"
+               title="http://www.onto-med.de/ontologies/gfo.owl#PointRegion">point region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#MeasurementPoint" title="https://annosaxfdm.de/ontology/MeasurementPoint">Measurement point</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#OrientationPoint" title="https://annosaxfdm.de/ontology/OrientationPoint">Orientation point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#endsOn" title="https://annosaxfdm.de/ontology/endsOn">ends on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#passesThrough" title="https://annosaxfdm.de/ontology/passesThrough">passes through</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#startsOn" title="https://annosaxfdm.de/ontology/startsOn">starts on</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AnatomicalProperty">
+      <h3>Anatomical property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/AnatomicalProperty</p>
+      <div class="comment">
+         <span class="markdown">An anatomical property is a characteristic (e.g., shape) of an anatomical structure.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.onto-med.de/ontologies/gfo.owl#Attributive"
+               target="_blank"
+               title="http://www.onto-med.de/ontologies/gfo.owl#Attributive">attributive</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AnatomicalSpace">
+      <h3>Anatomical space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/AnatomicalSpace</p>
+      <div class="comment">
+         <span class="markdown">An anatomical space is a space region (three-dimensional) occupied by a material anatomical object.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SpatialAnatomicalEntity"
+               title="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity">Spatial anatomical entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.onto-med.de/ontologies/gfo.owl#SpaceRegion"
+               target="_blank"
+               title="http://www.onto-med.de/ontologies/gfo.owl#SpaceRegion">space region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AnatomicalStructure">
+      <h3>Anatomical structure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/AnatomicalStructure</p>
+      <div class="comment">
+         <span class="markdown">Anatomical structures in the anthropological context are material anatomical entities: tooth structures (teeth and teeth parts), bone structures (single bones, bone parts and bone compounds), as well as the complete skeleton.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AnatomicalEntity" title="https://annosaxfdm.de/ontology/AnatomicalEntity">Anatomical entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.onto-med.de/ontologies/gfo.owl#MaterialObject"
+               target="_blank"
+               title="http://www.onto-med.de/ontologies/gfo.owl#MaterialObject">material object</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#BoneStructure" title="https://annosaxfdm.de/ontology/BoneStructure">Bone structure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Skeleton" title="https://annosaxfdm.de/ontology/Skeleton">Skeleton</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ToothStructure" title="https://annosaxfdm.de/ontology/ToothStructure">Tooth structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#spatialEntityOf" title="https://annosaxfdm.de/ontology/spatialEntityOf">spatial entity of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AnatomicalSurface">
+      <h3>Anatomical surface<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/AnatomicalSurface</p>
+      <div class="comment">
+         <span class="markdown">An anatomical surface is a boundary (two-dimensional) of an anatomical space.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SpatialAnatomicalEntity"
+               title="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity">Spatial anatomical entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.onto-med.de/ontologies/gfo.owl#SurfaceRegion"
+               target="_blank"
+               title="http://www.onto-med.de/ontologies/gfo.owl#SurfaceRegion">surface region</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AnatomicalPlane" title="https://annosaxfdm.de/ontology/AnatomicalPlane">Anatomical plane</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Bone">
+      <h3>Bone<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/Bone</p>
+      <div class="comment">
+         <span class="markdown">A bone is a skeletal element, i.e. a single self-contained bony entity. Bones, such as Radius and Ulna are individual bone organs.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#BoneStructure" title="https://annosaxfdm.de/ontology/BoneStructure">Bone structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BoneCompound">
+      <h3>Bone compound<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/BoneCompound</p>
+      <div class="comment">
+         <span class="markdown">A bone compound is a composite structure consisting of further bone compounds, individual bones or bone parts.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#BoneStructure" title="https://annosaxfdm.de/ontology/BoneStructure">Bone structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BonePart">
+      <h3>Bone part<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/BonePart</p>
+      <div class="comment">
+         <span class="markdown">A bone part is a part of a single bone (e.g., bony processes or bony prominences).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#BoneStructure" title="https://annosaxfdm.de/ontology/BoneStructure">Bone structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BoneStructure">
+      <h3>Bone structure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/BoneStructure</p>
+      <div class="comment">
+         <span class="markdown">A bone structure is either a single bone or a bone part or a bone compound.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AnatomicalStructure"
+               title="https://annosaxfdm.de/ontology/AnatomicalStructure">Anatomical structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Bone" title="https://annosaxfdm.de/ontology/Bone">Bone</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#BoneCompound" title="https://annosaxfdm.de/ontology/BoneCompound">Bone compound</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#BonePart" title="https://annosaxfdm.de/ontology/BonePart">Bone part</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#locatedOn" title="https://annosaxfdm.de/ontology/locatedOn">located on</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MeasurementPoint">
+      <h3>Measurement point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/MeasurementPoint</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AnatomicalPoint" title="https://annosaxfdm.de/ontology/AnatomicalPoint">Anatomical point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OrientationPoint">
+      <h3>Orientation point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/OrientationPoint</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AnatomicalPoint" title="https://annosaxfdm.de/ontology/AnatomicalPoint">Anatomical point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Phenotype">
+      <h3>Phenotype<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/Phenotype</p>
+      <div class="comment">
+         <span class="markdown">A phenotype is a (combination of) bodily feature(s) or observable characteristic(s) of an organism.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.onto-med.de/ontologies/gfo.owl#Attributive"
+               target="_blank"
+               title="http://www.onto-med.de/ontologies/gfo.owl#Attributive">attributive</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#derivedFrom" title="https://annosaxfdm.de/ontology/derivedFrom">derived from</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RelativeAnatomicalLocation">
+      <h3>Relative anatomical location<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/RelativeAnatomicalLocation</p>
+      <div class="comment">
+         <span class="markdown">A relative anatomical location is a position of an anatomical entity (e.g., a bone object) in relation to another anatomical entity (e.g., another bone, an axis, a plane or a point such as the centre of the body). Relative anatomical locations are classified according to the anatomical terms of location (e.g., cranial = 'towards the end of the skull' or dexter = 'right').</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.onto-med.de/ontologies/gfo.owl#Relator"
+               target="_blank"
+               title="http://www.onto-med.de/ontologies/gfo.owl#Relator">relator</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#locationOf" title="https://annosaxfdm.de/ontology/locationOf">location of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relativeTo" title="https://annosaxfdm.de/ontology/relativeTo">relative to</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasLocation" title="https://annosaxfdm.de/ontology/hasLocation">has location</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Skeleton">
+      <h3>Skeleton<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/Skeleton</p>
+      <div class="comment">
+         <span class="markdown">The largest or most comprehensive anatomical structure, the human skeleton is the framework composed of all the bones and the teeth of a human being.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AnatomicalStructure"
+               title="https://annosaxfdm.de/ontology/AnatomicalStructure">Anatomical structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SpatialAnatomicalEntity">
+      <h3>Spatial anatomical entity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/SpatialAnatomicalEntity</p>
+      <div class="comment">
+         <span class="markdown">A spatial anatomical entity is either an anatomical space (three-dimensional) or an anatomical surface (two-dimensional) or an anatomical line (one-dimensional) or an anatomical point (zero-dimensional).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AnatomicalEntity" title="https://annosaxfdm.de/ontology/AnatomicalEntity">Anatomical entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.onto-med.de/ontologies/gfo.owl#SpaceEntity"
+               target="_blank"
+               title="http://www.onto-med.de/ontologies/gfo.owl#SpaceEntity">space entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AnatomicalLine" title="https://annosaxfdm.de/ontology/AnatomicalLine">Anatomical line</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AnatomicalPoint" title="https://annosaxfdm.de/ontology/AnatomicalPoint">Anatomical point</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AnatomicalSpace" title="https://annosaxfdm.de/ontology/AnatomicalSpace">Anatomical space</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AnatomicalSurface" title="https://annosaxfdm.de/ontology/AnatomicalSurface">Anatomical surface</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasValue" title="https://annosaxfdm.de/ontology/hasValue">has value</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#spatialEntityOf" title="https://annosaxfdm.de/ontology/spatialEntityOf">spatial entity of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Tooth">
+      <h3>Tooth<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/Tooth</p>
+      <div class="comment">
+         <span class="markdown">A human tooth is the individual entity of the human dentition or the teeth as a whole. Teeth are parts of the skeleton, yet they are characterised by their own distinctive tissue and thus treated separately from bones. Teeth, such as the Dens caninus (canine tooth) are located on bone structures.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ToothStructure" title="https://annosaxfdm.de/ontology/ToothStructure">Tooth structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ToothPart">
+      <h3>Tooth part<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/ToothPart</p>
+      <div class="comment">
+         <span class="markdown">A tooth part is a part of a single tooth.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ToothStructure" title="https://annosaxfdm.de/ontology/ToothStructure">Tooth structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ToothStructure">
+      <h3>Tooth structure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/ToothStructure</p>
+      <div class="comment">
+         <span class="markdown">A tooth structure is either a single tooth or a tooth part.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AnatomicalStructure"
+               title="https://annosaxfdm.de/ontology/AnatomicalStructure">Anatomical structure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Tooth" title="https://annosaxfdm.de/ontology/Tooth">Tooth</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ToothPart" title="https://annosaxfdm.de/ontology/ToothPart">Tooth part</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#locatedOn" title="https://annosaxfdm.de/ontology/locatedOn">located on</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#derivedFrom" title="https://annosaxfdm.de/ontology/derivedFrom">
+            <span>derived from</span>
+         </a>
+      </li>
+      <li>
+         <a href="#directionOf" title="https://annosaxfdm.de/ontology/directionOf">
+            <span>direction of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#endsOn" title="https://annosaxfdm.de/ontology/endsOn">
+            <span>ends on</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasDirection" title="https://annosaxfdm.de/ontology/hasDirection">
+            <span>has direction</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasLocation" title="https://annosaxfdm.de/ontology/hasLocation">
+            <span>has location</span>
+         </a>
+      </li>
+      <li>
+         <a href="#locatedOn" title="https://annosaxfdm.de/ontology/locatedOn">
+            <span>located on</span>
+         </a>
+      </li>
+      <li>
+         <a href="#locationOf" title="https://annosaxfdm.de/ontology/locationOf">
+            <span>location of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#passesThrough" title="https://annosaxfdm.de/ontology/passesThrough">
+            <span>passes through</span>
+         </a>
+      </li>
+      <li>
+         <a href="#relativeTo" title="https://annosaxfdm.de/ontology/relativeTo">
+            <span>relative to</span>
+         </a>
+      </li>
+      <li>
+         <a href="#spatialEntityOf" title="https://annosaxfdm.de/ontology/spatialEntityOf">
+            <span>spatial entity of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#startsOn" title="https://annosaxfdm.de/ontology/startsOn">
+            <span>starts on</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="derivedFrom">
+      <h3>derived from<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/derivedFrom</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Phenotype" title="https://annosaxfdm.de/ontology/Phenotype">Phenotype</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AnatomicalEntity" title="https://annosaxfdm.de/ontology/AnatomicalEntity">Anatomical entity</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#AnatomicalProperty"
+                  title="https://annosaxfdm.de/ontology/AnatomicalProperty">Anatomical property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="directionOf">
+      <h3>direction of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/directionOf</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#locationOf" title="https://annosaxfdm.de/ontology/locationOf">location of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasDirection" title="https://annosaxfdm.de/ontology/hasDirection">has direction</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="endsOn">
+      <h3>ends on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/endsOn</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.onto-med.de/ontologies/gfo.owl#hasBoundary"
+                  target="_blank"
+                  title="http://www.onto-med.de/ontologies/gfo.owl#hasBoundary">has boundary</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#AnatomicalLine" title="https://annosaxfdm.de/ontology/AnatomicalLine">Anatomical line</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AnatomicalPoint" title="https://annosaxfdm.de/ontology/AnatomicalPoint">Anatomical point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDirection">
+      <h3>has direction<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/hasDirection</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasLocation" title="https://annosaxfdm.de/ontology/hasLocation">has location</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#directionOf" title="https://annosaxfdm.de/ontology/directionOf">direction of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasLocation">
+      <h3>has location<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/hasLocation</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasDirection" title="https://annosaxfdm.de/ontology/hasDirection">has direction</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#AnatomicalEntity" title="https://annosaxfdm.de/ontology/AnatomicalEntity">Anatomical entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#RelativeAnatomicalLocation"
+                  title="https://annosaxfdm.de/ontology/RelativeAnatomicalLocation">Relative anatomical location</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#locationOf" title="https://annosaxfdm.de/ontology/locationOf">location of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="locatedOn">
+      <h3>located on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/locatedOn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ToothStructure" title="https://annosaxfdm.de/ontology/ToothStructure">Tooth structure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#BoneStructure" title="https://annosaxfdm.de/ontology/BoneStructure">Bone structure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="locationOf">
+      <h3>location of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/locationOf</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#directionOf" title="https://annosaxfdm.de/ontology/directionOf">direction of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#RelativeAnatomicalLocation"
+                  title="https://annosaxfdm.de/ontology/RelativeAnatomicalLocation">Relative anatomical location</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AnatomicalEntity" title="https://annosaxfdm.de/ontology/AnatomicalEntity">Anatomical entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasLocation" title="https://annosaxfdm.de/ontology/hasLocation">has location</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="passesThrough">
+      <h3>passes through<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/passesThrough</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.onto-med.de/ontologies/gfo.owl#hasBoundary"
+                  target="_blank"
+                  title="http://www.onto-med.de/ontologies/gfo.owl#hasBoundary">has boundary</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#AnatomicalLine" title="https://annosaxfdm.de/ontology/AnatomicalLine">Anatomical line</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AnatomicalPoint" title="https://annosaxfdm.de/ontology/AnatomicalPoint">Anatomical point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="relativeTo">
+      <h3>relative to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/relativeTo</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#RelativeAnatomicalLocation"
+                  title="https://annosaxfdm.de/ontology/RelativeAnatomicalLocation">Relative anatomical location</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AnatomicalEntity" title="https://annosaxfdm.de/ontology/AnatomicalEntity">Anatomical entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="spatialEntityOf">
+      <h3>spatial entity of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/spatialEntityOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialAnatomicalEntity"
+                  title="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity">Spatial anatomical entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AnatomicalStructure"
+                  title="https://annosaxfdm.de/ontology/AnatomicalStructure">Anatomical structure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="startsOn">
+      <h3>starts on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/startsOn</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.onto-med.de/ontologies/gfo.owl#hasBoundary"
+                  target="_blank"
+                  title="http://www.onto-med.de/ontologies/gfo.owl#hasBoundary">has boundary</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#AnatomicalLine" title="https://annosaxfdm.de/ontology/AnatomicalLine">Anatomical line</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AnatomicalPoint" title="https://annosaxfdm.de/ontology/AnatomicalPoint">Anatomical point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasValue" title="https://annosaxfdm.de/ontology/hasValue">
+            <span>has value</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="hasValue">
+      <h3>has value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://annosaxfdm.de/ontology/hasValue</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialAnatomicalEntity"
+                  title="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity">Spatial anatomical entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#decimal"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
