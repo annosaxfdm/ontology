@@ -1,13 +1,13 @@
 name: build
- 
+
 on:
   workflow_dispatch:
   push:
     branches:
       - master
- 
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -18,9 +18,9 @@ jobs:
 
       - name: Build
         run: |
-          ./scripts/combine
-          ./scripts/transform
-     
+          scripts/combine | tee $GITHUB_STEP_SUMMARY
+          scripts/transform
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:

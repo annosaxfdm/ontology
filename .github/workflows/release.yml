@@ -9,14 +9,15 @@ jobs:
     outputs:
       upload_url: ${{ steps.create-release.outputs.upload_url }}
     steps:
-      - name: Build Changelog
-        id: build-changelog
+      - name: Changelog
+        id: changelog
         uses: mikepenz/release-changelog-builder-action@v4
         with:
           commitMode: true
           configurationJson: |
             {
-              "pr_template": "- #{{TITLE}}"
+              "pr_template": "- #{{TITLE}}",
+              "template": "#{{UNCATEGORIZED}}"
             }
 
       - name: Checkout code
@@ -26,15 +27,21 @@ jobs:
         run: sudo apt-get install -y raptor2-utils
 
       - name: Build
+        id: build
         run: |
-          ./scripts/combine
-          ./scripts/transform
+             scripts/combine | tee $GITHUB_STEP_SUMMARY
+             scripts/transform
+             echo 'summary<<EOF' >> $GITHUB_OUTPUT
+             cat ${GITHUB_STEP_SUMMARY} >> $GITHUB_OUTPUT
+             echo 'EOF' >> $GITHUB_OUTPUT
 
       - name: Create Release
         id: create-release
         uses: softprops/action-gh-release@v2
         with:
-          body: ${{steps.build-changelog.outputs.changelog}}
+          body: |
+                ${{ steps.build.outputs.summary }}
+                ${{ steps.changelog.outputs.changelog }}
           files: |
             dist/anno.ttl
             dist/anno-ols.ttl

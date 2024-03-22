@@ -1,16 +1,38 @@
 #!/bin/sh
 # Combine annodc.owl and annods.owl and convert it to anno.ttl.
-SCRIPT_PATH=`dirname "$0"`
-ROOT=`( cd "$SCRIPT_PATH/.." && pwd )`
-DIST=$ROOT/dist
+SCRIPTPATH=`dirname "$0"`
+ROOT=`( cd "$SCRIPTPATH/.." && pwd )`
+DISTPATH=$ROOT/dist
 mkdir -p $ROOT/dist
 rapper -i rdfxml $ROOT/annodc.owl -o ntriples > /tmp/annodc.nt
 # prevent errors through overlapping blank node identifiers
 rapper -i rdfxml $ROOT/annods.owl -o ntriples | sed "s/genid/schmenid/g"> /tmp/annods.nt
 # workaround for spaces in URIs
-cat $SCRIPT_PATH/prefix.ttl /tmp/annodc.nt /tmp/annods.nt \
+cat $SCRIPTPATH/prefix.ttl /tmp/annodc.nt /tmp/annods.nt \
 | sed  "s/\\\u0020/%20/g" \
 > /tmp/anno.ttl
 # resulting file is valid turtle but does not use prefixes yet
 # reconvert to apply prefixes
-rapper -i turtle -o turtle /tmp/anno.ttl > $DIST/anno.ttl
+rapper -i turtle -o turtle /tmp/anno.ttl > $DISTPATH/anno.ttl
+
+cd $DISTPATH
+# awk supports decimal places
+if type awk > /dev/null 2>&1; then
+	echo "|  Filename  |  bytes    |   KiB    |   MiB    |    KB    |    MB    |"
+	echo "|  --------  |  -----    |   ---    |   ---    |    --    |    --    |"
+	# "command ls" in case it is aliased to eza or something else, we need the exact ls output format
+	LC_ALL=C command ls -l *.ttl | awk '{printf("|%11s |%10s |%9s |%9s |%9s |%9s |\n", $9, $5, $5/1024, $5/1024^2, $5/1000, $5/1000^2)}'
+fi
+printf "\n## Truncated\n\n"
+# bash has easier command substitution but only integers
+echo "|  Filename   |  triples    | bytes        |   KiB     |   MiB   |    KB     |    MB  |"
+echo "|  ---------  |  -------    | -----        |   ---     |   ---   |    --     |    --  |"
+command ls -l *.ttl | tr -s ' ' | cut -f5,9 -d ' ' | while read -r size filename; do 
+  triples=$(rapper -i turtle -c "$filename" 2>&1 | grep -o "[0-9]*")
+  kb=$((size / 1000))
+  mb=$((size / 1000000))
+  kib=$((size / 1024))
+  mib=$((size / 1024 / 1024))
+  #echo "$size $filename"
+  printf "| %11s | %11s | %12s | %9s | %7s | %9s |%7s |\n" $filename $triples $size $kib $mib $kb $mb
+done
