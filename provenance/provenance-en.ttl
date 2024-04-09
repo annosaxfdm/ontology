@@ -1,0 +1,33 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "The ANthropological Notation Ontology (ANNO): A core ontology for annotating human bones and deriving phenotypes";
+	 prov:wasAttributedTo <https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/fritzsch-hanjo-tim>;
+	 dc:creator <https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/fritzsch-hanjo-tim>;
+	 prov:wasAttributedTo <https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise>;
+	 dc:creator <https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise>;
+	 prov:wasAttributedTo <https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/schmiedel-fabian>;
+	 dc:creator <https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/schmiedel-fabian>;
+	 prov:wasAttributedTo <https://www.imise.uni-leipzig.de/en/Mitarbeiter/Alexandr_Uciteli>;
+	 dc:creator <https://www.imise.uni-leipzig.de/en/Mitarbeiter/Alexandr_Uciteli>;
+	 prov:wasAttributedTo <https://www.imise.uni-leipzig.de/en/Mitarbeiter/Konrad_Hoeffner>;
+	 dc:creator <https://www.imise.uni-leipzig.de/en/Mitarbeiter/Konrad_Hoeffner>;
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo :agent4;
+	 prov:wasAttributedTo :agent5;
+	 prov:wasAttributedTo :agent6;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2024-04-09T13:35:47.563141892";
+.
+:agent0 a prov:Agent; foaf:name "<a href='https://github.com/KonradHoeffner'>Konrad Höffner</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a>".
+:agent1 a prov:Agent; foaf:name "<a href='https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise/'>Marie Heuschkel</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a>".
+:agent2 a prov:Agent; foaf:name "<a href='https://www.cb.hs-mittweida.de/professoren-innen/forensik/prof-labudde/'>Dirk Labudde</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a>".
+:agent3 a prov:Agent; foaf:name "<a href='https://www.imise.uni-leipzig.de/en/Mitarbeiter/Alexandr_Uciteli'>Alexandr Uciteli</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a>".
+:agent4 a prov:Agent; foaf:name "Fabian Schmiedel".
+:agent5 a prov:Agent; foaf:name "Andy Ludwig".
+:agent6 a prov:Agent; foaf:name "Marleen Mohaupt".
