@@ -1,0 +1,6 @@
+#!/bin/sh
+# call scripts/combine first
+SCRIPTPATH=`dirname "$0"`
+BASEPATH="$SCRIPTPATH/.."
+BASEPATH=`( cd "$BASEPATH" && pwd )`
+widoco -ontFile $BASEPATH/dist/anno.ttl -ontFile $BASEPATH/annods.owl -rewriteAll -uniteSections -getOntologyMetadata -ignoreIndividuals -outFolder /tmp

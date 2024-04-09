@@ -1,18 +1,26 @@
 name: Generate and Publish Ontology Documentation
 
+# dist branch will not fire push trigger, use manual workflow dispatch.
+# See https://github.com/orgs/community/discussions/37103.
+# An alternative would be to add tokens and add those to the checkout job of the build workflow but that isn't worth the trouble right now.
 on:
   workflow_dispatch:
+    branches:
+      - dist
   push:
     branches:
-      - master
+      - dist
 
 jobs:
   doc:
     runs-on: ubuntu-latest
     env:
-      WIDOCO_DOWNLOAD_URL: https://github.com/dgarijo/Widoco/releases/download/v1.4.20/widoco-1.4.20-jar-with-dependencies_JDK-17.jar
+      WIDOCO_DOWNLOAD_URL: https://github.com/dgarijo/Widoco/releases/download/v1.4.23/widoco-1.4.23-jar-with-dependencies_JDK-17.jar
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: 'dist'
+
       - name: Cache Widoco
         uses: actions/cache@v4
         with:
@@ -27,7 +35,7 @@ jobs:
           wget $WIDOCO_DOWNLOAD_URL --progress=dot:giga --output-document=jar/widoco.jar
 
       - name: Run Widoco
-        run: java -jar jar/widoco.jar -ontFile annodc.owl -rewriteAll -uniteSections -getOntologyMetadata -outFolder .
+        run: java -jar jar/widoco.jar -ontFile anno.ttl -rewriteAll -uniteSections -getOntologyMetadata -outFolder doc
 
       - name: Rename index-en.html to index.html
         run: mv doc/index-en.html doc/index.html
