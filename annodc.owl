@@ -1,62 +1,165 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://annosaxfdm.de/ontology/"
      xml:base="https://annosaxfdm.de/ontology/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:fma="http://purl.org/sig/ont/fma/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:fma="http://purl.org/sig/ont/fma/"
-     xmlns:gfo="http://www.onto-med.de/ontologies/gfo.owl#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:doap="http://usefulinc.com/ns/doap#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:bibo="http://purl.org/ontology/bibo/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-
-   <owl:Ontology rdf:about="https://annosaxfdm.de/ontology/">
-        <owl:versionInfo>2024-04-09</owl:versionInfo>
-        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-24</dct:created>
-        <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/published"/>
-        <rdfs:seeAlso rdf:resource="https://zenodo.org/record/8380382"/>
-        <rdfs:seeAlso rdf:resource="https://ols.imise.uni-leipzig.de/ontologies/anno"/>
-        <rdfs:label xml:lang="en">Anthropological Notation Ontology</rdfs:label>
+     xmlns:gfo-light="https://w3id.org/gfo/light/">
+    <owl:Ontology rdf:about="https://annosaxfdm.de/ontology/">
         <dct:abstract xml:lang="en">The Anthropological Notation Ontology (ANNO) allows the systematic and standardized classification of recovered bone finds into the skeletal system, the description of the skeletal pieces, and the definition of functions for the derivation of different phenotypes of humans in forensic and historical anthropology. ANNO consists of two components: ANNOdc, a domain-core ontology providing core entities such as basic anatomical categories, and ANNOds, a domain-specific ontology used for annotating structures of the human skeleton. ANNO is integrated into AnthroWorks3D, a photogrammetry pipeline and application for the creation and analysis of 3D-models of human skeletal remains. The integration is based on the three-ontology method with the General Formal Ontology as the top-level ontology, ANNOdc as the task ontology and ANNOds as the domain ontology. Thus, AnthroWorks3D only needs to implement access to the entities (classes and properties) of the task ontology, whereas the entities of the corresponding domain ontology are imported dynamically. ANNO supports the analysis of skeletal and bone finds in forensic and historical anthropology, facilitating the standardization of data annotation and ensuring accurate preservation of information for posterity.</dct:abstract>
-        <dct:description xml:lang="en">The Anthropological Notation Ontology (ANNO) allows the systematic and standardized classification of recovered bone finds into the skeletal system, the description of the skeletal pieces, and the definition of functions for the derivation of different phenotypes of humans in forensic and historical anthropology.</dct:description>
-        <dct:description xml:lang="de">Ziel des SaxFDM-Fokusprojektes ist die Entwicklung einer Ontologie für die einheitliche Einordnung der Knochenfunde aus den Ausgrabungen in das Skelettsystem, die Beschreibung der Skelettstücke sowie die Definition von Funktionen zur Ableitung verschiedener Phänotypen des Menschen. Die Ontologie soll in einem Terminologieservice verwaltet werden, der sich mit denen der NFDI synchronisieren kann.</dct:description>
-        <dct:title xml:lang="en">The ANthropological Notation Ontology (ANNO): A core ontology for annotating human bones and deriving phenotypes</dct:title>
-        <doap:repository rdf:resource="https://github.com/annosaxfdm/ontology"/>
-        <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <dct:publisher rdf:resource="https://www.imise.uni-leipzig.de"/>
-        <dct:creator><![CDATA[<a href='https://www.imise.uni-leipzig.de/en/Mitarbeiter/Alexandr_Uciteli'>Alexandr Uciteli</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a>]]></dct:creator>
-        <dct:creator><![CDATA[<a href='https://www.cb.hs-mittweida.de/professoren-innen/forensik/prof-labudde/'>Dirk Labudde</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a>]]></dct:creator>
-        <dct:creator><![CDATA[<a href='https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise/'>Marie Heuschkel</a>, <a href='https://www.cb.hs-mittweida.de/'>Hochschule Mittweida, Germany</a>]]></dct:creator>
-        <dct:creator><![CDATA[<a href='https://github.com/KonradHoeffner'>Konrad Höffner</a>, <a href='https://www.imise.uni-leipzig.de/en'>IMISE Leipzig, Germany</a>]]></dct:creator>
-        <dct:creator>Fabian Schmiedel</dct:creator>
         <dct:contributor>Andy Ludwig</dct:contributor>
         <dct:contributor>Marleen Mohaupt</dct:contributor>
-        <vann:preferredNamespaceURI>https://annosaxfdm.de/ontology/</vann:preferredNamespaceURI>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-24</dct:created>
+        <dct:creator>&lt;a href=&apos;https://github.com/KonradHoeffner&apos;&gt;Konrad Höffner&lt;/a&gt;, &lt;a href=&apos;https://www.imise.uni-leipzig.de/en&apos;&gt;IMISE Leipzig, Germany&lt;/a&gt;</dct:creator>
+        <dct:creator>&lt;a href=&apos;https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise/&apos;&gt;Marie Heuschkel&lt;/a&gt;, &lt;a href=&apos;https://www.cb.hs-mittweida.de/&apos;&gt;Hochschule Mittweida, Germany&lt;/a&gt;</dct:creator>
+        <dct:creator>&lt;a href=&apos;https://www.cb.hs-mittweida.de/professoren-innen/forensik/prof-labudde/&apos;&gt;Dirk Labudde&lt;/a&gt;, &lt;a href=&apos;https://www.cb.hs-mittweida.de/&apos;&gt;Hochschule Mittweida, Germany&lt;/a&gt;</dct:creator>
+        <dct:creator>&lt;a href=&apos;https://www.imise.uni-leipzig.de/en/Mitarbeiter/Alexandr_Uciteli&apos;&gt;Alexandr Uciteli&lt;/a&gt;, &lt;a href=&apos;https://www.imise.uni-leipzig.de/en&apos;&gt;IMISE Leipzig, Germany&lt;/a&gt;</dct:creator>
+        <dct:creator>Fabian Schmiedel</dct:creator>
+        <dct:description xml:lang="en">The Anthropological Notation Ontology (ANNO) allows the systematic and standardized classification of recovered bone finds into the skeletal system, the description of the skeletal pieces, and the definition of functions for the derivation of different phenotypes of humans in forensic and historical anthropology.</dct:description>
+        <dct:description xml:lang="de">Ziel des SaxFDM-Fokusprojektes ist die Entwicklung einer Ontologie für die einheitliche Einordnung der Knochenfunde aus den Ausgrabungen in das Skelettsystem, die Beschreibung der Skelettstücke sowie die Definition von Funktionen zur Ableitung verschiedener Phänotypen des Menschen. Die Ontologie soll in einem Terminologieservice verwaltet werden, der sich mit denen der NFDI synchronisieren kann.</dct:description>
+        <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dct:publisher rdf:resource="https://www.imise.uni-leipzig.de"/>
+        <dct:title xml:lang="en">The ANthropological Notation Ontology (ANNO): A core ontology for annotating human bones and deriving phenotypes</dct:title>
+        <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/published"/>
         <vann:preferredNamespacePrefix>anno</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceURI>https://annosaxfdm.de/ontology/</vann:preferredNamespaceURI>
+        <doap:repository rdf:resource="https://github.com/annosaxfdm/ontology"/>
+        <rdfs:label xml:lang="en">Anthropological Notation Ontology</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://ols.imise.uni-leipzig.de/ontologies/anno"/>
+        <rdfs:seeAlso rdf:resource="https://zenodo.org/record/8380382"/>
+        <owl:versionInfo>2024-04-09</owl:versionInfo>
         <foaf:homepage>https://annosaxfdm.de/</foaf:homepage>
         <foaf:logo>https://annosaxfdm.imise.uni-leipzig.de/public/anno-logo-blue.svg</foaf:logo>
     </owl:Ontology>
+    
 
-    <!--
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/status -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceURI -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceURI"/>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#repository -->
+
+    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#repository"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#related"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/logo -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/logo"/>
+    
+
+
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
-    -->
+     -->
 
-    <owl:ObjectProperty rdf:about="http://www.onto-med.de/ontologies/gfo.owl#boundaryOf"/>
-    <owl:ObjectProperty rdf:about="http://www.onto-med.de/ontologies/gfo.owl#hasBoundary"/>
-    <owl:ObjectProperty rdf:about="http://www.onto-med.de/ontologies/gfo.owl#hasPart"/>
-    <owl:ObjectProperty rdf:about="http://www.onto-med.de/ontologies/gfo.owl#occupiedBy"/>
-    <owl:ObjectProperty rdf:about="http://www.onto-med.de/ontologies/gfo.owl#occupies"/>
-    <owl:ObjectProperty rdf:about="http://www.onto-med.de/ontologies/gfo.owl#partOf"/>
-    <owl:ObjectProperty rdf:about="http://www.onto-med.de/ontologies/gfo.owl#propertyOf"/>
+    
+
 
     <!-- https://annosaxfdm.de/ontology/derivedFrom -->
 
@@ -71,6 +174,7 @@
             </owl:Class>
         </rdfs:range>
     </owl:ObjectProperty>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/directionOf -->
@@ -79,15 +183,7 @@
         <rdfs:subPropertyOf rdf:resource="https://annosaxfdm.de/ontology/locationOf"/>
         <owl:inverseOf rdf:resource="https://annosaxfdm.de/ontology/hasDirection"/>
     </owl:ObjectProperty>
-
-
-    <!-- https://annosaxfdm.de/ontology/endsOn -->
-
-    <owl:ObjectProperty rdf:about="https://annosaxfdm.de/ontology/endsOn">
-        <rdfs:subPropertyOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#hasBoundary"/>
-        <rdfs:domain rdf:resource="https://annosaxfdm.de/ontology/AnatomicalLine"/>
-        <rdfs:range rdf:resource="https://annosaxfdm.de/ontology/AnatomicalPoint"/>
-    </owl:ObjectProperty>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/hasDirection -->
@@ -95,6 +191,7 @@
     <owl:ObjectProperty rdf:about="https://annosaxfdm.de/ontology/hasDirection">
         <rdfs:subPropertyOf rdf:resource="https://annosaxfdm.de/ontology/hasLocation"/>
     </owl:ObjectProperty>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/hasLocation -->
@@ -104,14 +201,7 @@
         <rdfs:domain rdf:resource="https://annosaxfdm.de/ontology/AnatomicalEntity"/>
         <rdfs:range rdf:resource="https://annosaxfdm.de/ontology/RelativeAnatomicalLocation"/>
     </owl:ObjectProperty>
-
-
-    <!-- https://annosaxfdm.de/ontology/locatedOn -->
-
-    <owl:ObjectProperty rdf:about="https://annosaxfdm.de/ontology/locatedOn">
-        <rdfs:domain rdf:resource="https://annosaxfdm.de/ontology/ToothStructure"/>
-        <rdfs:range rdf:resource="https://annosaxfdm.de/ontology/BoneStructure"/>
-    </owl:ObjectProperty>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/locationOf -->
@@ -120,15 +210,7 @@
         <rdfs:domain rdf:resource="https://annosaxfdm.de/ontology/RelativeAnatomicalLocation"/>
         <rdfs:range rdf:resource="https://annosaxfdm.de/ontology/AnatomicalEntity"/>
     </owl:ObjectProperty>
-
-
-    <!-- https://annosaxfdm.de/ontology/passesThrough -->
-
-    <owl:ObjectProperty rdf:about="https://annosaxfdm.de/ontology/passesThrough">
-        <rdfs:subPropertyOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#hasBoundary"/>
-        <rdfs:domain rdf:resource="https://annosaxfdm.de/ontology/AnatomicalLine"/>
-        <rdfs:range rdf:resource="https://annosaxfdm.de/ontology/AnatomicalPoint"/>
-    </owl:ObjectProperty>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/relativeTo -->
@@ -137,26 +219,74 @@
         <rdfs:domain rdf:resource="https://annosaxfdm.de/ontology/RelativeAnatomicalLocation"/>
         <rdfs:range rdf:resource="https://annosaxfdm.de/ontology/AnatomicalEntity"/>
     </owl:ObjectProperty>
+    
 
 
-    <!-- https://annosaxfdm.de/ontology/spatialEntityOf -->
+    <!-- https://w3id.org/gfo/light/attributiveOf -->
 
-    <owl:ObjectProperty rdf:about="https://annosaxfdm.de/ontology/spatialEntityOf">
-        <rdfs:domain rdf:resource="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"/>
-        <rdfs:range rdf:resource="https://annosaxfdm.de/ontology/AnatomicalStructure"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/gfo/light/attributiveOf"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/boundaryOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/gfo/light/boundaryOf"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/endsOn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/gfo/light/endsOn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/gfo/light/passesThrough"/>
     </owl:ObjectProperty>
+    
 
 
-    <!-- https://annosaxfdm.de/ontology/startsOn -->
+    <!-- https://w3id.org/gfo/light/hasBoundary -->
 
-    <owl:ObjectProperty rdf:about="https://annosaxfdm.de/ontology/startsOn">
-        <rdfs:subPropertyOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#hasBoundary"/>
-        <rdfs:domain rdf:resource="https://annosaxfdm.de/ontology/AnatomicalLine"/>
-        <rdfs:range rdf:resource="https://annosaxfdm.de/ontology/AnatomicalPoint"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/gfo/light/hasBoundary"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/hasOwner -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/gfo/light/hasOwner"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/gfo/light/hasPart"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/locatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/gfo/light/locatedIn"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/partOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/gfo/light/partOf"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/passesThrough -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/gfo/light/passesThrough"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/startsOn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/gfo/light/startsOn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/gfo/light/passesThrough"/>
     </owl:ObjectProperty>
+    
 
 
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -164,6 +294,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
 
     <!-- https://annosaxfdm.de/ontology/hasValue -->
@@ -172,9 +303,10 @@
         <rdfs:domain rdf:resource="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
+    
 
 
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -182,6 +314,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
 
     <!-- https://annosaxfdm.de/ontology/AnatomicalAxis -->
@@ -198,78 +331,104 @@
         <rdfs:comment xml:lang="en">Anatomical axes are lines around which an organism is approximately symmetrical.</rdfs:comment>
         <rdfs:label xml:lang="en">Anatomical axis</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/AnatomicalEntity -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalEntity">
-        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma61775"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/Continuant"/>
         <rdfs:comment xml:lang="en">An anatomical entity is either an anatomical structure or a spatial anatomical entity.</rdfs:comment>
         <rdfs:label xml:lang="en">Anatomical entity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma61775"/>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/AnatomicalLine -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalLine">
-        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma9657"/>
-        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#LineRegion"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/Line"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#boundaryOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/boundaryOf"/>
                 <owl:someValuesFrom rdf:resource="https://annosaxfdm.de/ontology/AnatomicalSurface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/passesThrough"/>
+                <owl:someValuesFrom rdf:resource="https://annosaxfdm.de/ontology/AnatomicalPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/endsOn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://annosaxfdm.de/ontology/AnatomicalPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/startsOn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://annosaxfdm.de/ontology/AnatomicalPoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An anatomical line is a boundary (one-dimensional) of an anatomical surface.</rdfs:comment>
         <rdfs:comment xml:lang="en">An anatomical line is a conceptual, immaterial line on a bone that passes between or at multiple measurement points and is used in the form of distances, circumferences, or angles to collect measurements representing aspects of the bone’s dimensions.</rdfs:comment>
         <rdfs:comment xml:lang="en">Anatomical lines can connect or pass through points on anatomical entities (e.g., an edge between two or an angle between three anatomical entities).</rdfs:comment>
         <rdfs:label xml:lang="en">Anatomical line</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma9657"/>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/AnatomicalPlane -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalPlane">
-        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma242982"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/AnatomicalSurface"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#hasBoundary"/>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/hasBoundary"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://annosaxfdm.de/ontology/AnatomicalAxis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An anatomical plane is a hypothetical plane that transects the body to describe the location of structures or the direction of movements.</rdfs:comment>
         <rdfs:label xml:lang="en">Anatomical plane</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma242982"/>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/AnatomicalPoint -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalPoint">
-        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma9658"/>
-        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#PointRegion"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/Point"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#boundaryOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/boundaryOf"/>
                 <owl:someValuesFrom rdf:resource="https://annosaxfdm.de/ontology/AnatomicalLine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An anatomical point is a boundary (zero-dimensional) of an anatomical line.</rdfs:comment>
         <rdfs:comment xml:lang="en">An osteometric landmark or anatomical point is any immaterial, conceptual point that marks a location on a bone, either to create measurements (anatomical lines) or align the bone in specific planes for a measurement. The former serve as measurement points, the latter as orientation points.</rdfs:comment>
         <rdfs:label xml:lang="en">Anatomical point</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma9658"/>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/AnatomicalProperty -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalProperty">
-        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#Attributive"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/Attributive"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#propertyOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/attributiveOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://annosaxfdm.de/ontology/AnatomicalStructure"/>
             </owl:Restriction>
@@ -277,77 +436,53 @@
         <rdfs:comment xml:lang="en">An anatomical property is a characteristic (e.g., shape) of an anatomical structure.</rdfs:comment>
         <rdfs:label xml:lang="en">Anatomical property</rdfs:label>
     </owl:Class>
-
-
-    <!-- https://annosaxfdm.de/ontology/AnatomicalSpace -->
-
-    <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalSpace">
-        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#SpaceRegion"/>
-        <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#occupiedBy"/>
-                <owl:someValuesFrom rdf:resource="https://annosaxfdm.de/ontology/AnatomicalStructure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An anatomical space is a space region (three-dimensional) occupied by a material anatomical object.</rdfs:comment>
-        <rdfs:label xml:lang="en">Anatomical space</rdfs:label>
-    </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/AnatomicalStructure -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalStructure">
-        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma67165"/>
-        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#MaterialObject"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/AnatomicalEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#occupies"/>
-                <owl:someValuesFrom rdf:resource="https://annosaxfdm.de/ontology/AnatomicalSpace"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/MaterialContinuant"/>
         <rdfs:comment xml:lang="en">Anatomical structures in the anthropological context are material anatomical entities: tooth structures (teeth and teeth parts), bone structures (single bones, bone parts and bone compounds), as well as the complete skeleton.</rdfs:comment>
         <rdfs:label xml:lang="en">Anatomical structure</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma67165"/>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/AnatomicalSurface -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalSurface">
-        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma24137"/>
-        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#SurfaceRegion"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#boundaryOf"/>
-                <owl:someValuesFrom rdf:resource="https://annosaxfdm.de/ontology/AnatomicalSpace"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/Surface"/>
         <rdfs:comment xml:lang="en">An anatomical surface is a boundary (two-dimensional) of an anatomical space.</rdfs:comment>
         <rdfs:label xml:lang="en">Anatomical surface</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma24137"/>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/Bone -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/Bone">
-        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma5018"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/BoneStructure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/MaterialObject"/>
         <rdfs:comment xml:lang="en">A bone is a skeletal element, i.e. a single self-contained bony entity. Bones, such as Radius and Ulna are individual bone organs.</rdfs:comment>
         <rdfs:label xml:lang="en">Bone</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma5018"/>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/BoneCompound -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/BoneCompound">
-        <skos:related rdf:resource="http://purl.org/sig/ont/fma/fma23881"/>
-        <skos:related rdf:resource="http://purl.org/sig/ont/fma/fma85544"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/BoneStructure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/MaterialObject"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#hasPart"/>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/hasPart"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -362,18 +497,20 @@
         <rdfs:comment xml:lang="en">A bone compound is a composite structure consisting of further bone compounds, individual bones or bone parts.</rdfs:comment>
         <rdfs:comment xml:lang="en">A bone compound is a section of the skeleton combining multiple bones or bone parts together, depending on the classification system chosen. This allows for the representation of any partonomy that need not necessarily be compatible with one another.</rdfs:comment>
         <rdfs:label xml:lang="en">Bone compound</rdfs:label>
+        <skos:related rdf:resource="http://purl.org/sig/ont/fma/fma23881"/>
+        <skos:related rdf:resource="http://purl.org/sig/ont/fma/fma85544"/>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/BonePart -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/BonePart">
-        <skos:related rdf:resource="http://purl.org/sig/ont/fma/fma281808"/>
-        <skos:related rdf:resource="http://purl.org/sig/ont/fma/fma10483"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/BoneStructure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/MaterialPart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#partOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/partOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://annosaxfdm.de/ontology/Bone"/>
             </owl:Restriction>
@@ -382,7 +519,10 @@
         <rdfs:comment xml:lang="en">An anatomical landmark is any distinct structure on a bone. In ANNO, it is also referred to as a &apos;bone part&apos;.</rdfs:comment>
         <rdfs:comment xml:lang="en">On the skeletal level, bone parts comprise any piece or portion of a bone.</rdfs:comment>
         <rdfs:label xml:lang="en">Bone part</rdfs:label>
+        <skos:related rdf:resource="http://purl.org/sig/ont/fma/fma10483"/>
+        <skos:related rdf:resource="http://purl.org/sig/ont/fma/fma281808"/>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/BoneStructure -->
@@ -393,6 +533,7 @@
         <rdfs:comment xml:lang="en">Bone structures comprise all possible parts of the human skeleton, which are individual bones, bone parts, bone compounds as well as the complete skeleton excluding the teeth.</rdfs:comment>
         <rdfs:label xml:lang="en">Bone structure</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/MeasurementPoint -->
@@ -401,6 +542,7 @@
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/AnatomicalPoint"/>
         <rdfs:label xml:lang="en">Measurement point</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/OrientationPoint -->
@@ -409,12 +551,13 @@
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/AnatomicalPoint"/>
         <rdfs:label xml:lang="en">Orientation point</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/Phenotype -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/Phenotype">
-        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#Attributive"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/Attributive"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://annosaxfdm.de/ontology/derivedFrom"/>
@@ -431,13 +574,13 @@
         <rdfs:comment xml:lang="en">A phenotype is a (combination of) bodily feature(s) or observable characteristic(s) of an organism.</rdfs:comment>
         <rdfs:label xml:lang="en">Phenotype</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/RelativeAnatomicalLocation -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/RelativeAnatomicalLocation">
-        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma30346"/>
-        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#Relator"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/Relator"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://annosaxfdm.de/ontology/locationOf"/>
@@ -455,67 +598,73 @@
         <rdfs:comment xml:lang="en">A relative anatomical location is a position of an anatomical entity (e.g., a bone object) in relation to another anatomical entity (e.g., another bone, an axis, a plane or a point such as the centre of the body). Relative anatomical locations are classified according to the anatomical terms of location (e.g., cranial = &apos;towards the end of the skull&apos; or dexter = &apos;right&apos;).</rdfs:comment>
         <rdfs:comment xml:lang="en">The position of all anatomical structures is described in a standardised fashion using conceptual axes (a kind of anatomical lines), planes (a kind of anatomical surfaces) as well as directions (relative anatomical locations) relative to the body based on the standard anatomical position which refers to standing upright, facing forward, palms and toes pointing forward, thumbs to the side, and observed from the perspective of the respective individual.</rdfs:comment>
         <rdfs:label xml:lang="en">Relative anatomical location</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma30346"/>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/Skeleton -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/Skeleton">
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/AnatomicalStructure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/MaterialAggregate"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#hasPart"/>
-                        <owl:someValuesFrom rdf:resource="https://annosaxfdm.de/ontology/BoneStructure"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#hasPart"/>
-                        <owl:someValuesFrom rdf:resource="https://annosaxfdm.de/ontology/ToothStructure"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://annosaxfdm.de/ontology/BoneStructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://annosaxfdm.de/ontology/ToothStructure"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The largest or most comprehensive anatomical structure, the human skeleton is the framework composed of all the bones and the teeth of a human being.</rdfs:comment>
         <rdfs:label xml:lang="en">Skeleton</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/SpatialAnatomicalEntity -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/SpatialAnatomicalEntity">
-        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma67112"/>
-        <rdfs:subClassOf rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#SpaceEntity"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/AnatomicalEntity"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/ImmaterialContinuant"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://annosaxfdm.de/ontology/spatialEntityOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/hasOwner"/>
                 <owl:someValuesFrom rdf:resource="https://annosaxfdm.de/ontology/AnatomicalStructure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A spatial anatomical entity is either an anatomical space (three-dimensional) or an anatomical surface (two-dimensional) or an anatomical line (one-dimensional) or an anatomical point (zero-dimensional).</rdfs:comment>
         <rdfs:comment xml:lang="en">An (immaterial) anatomical entity without mass is classified as a spatial anatomical entity.</rdfs:comment>
         <rdfs:label xml:lang="en">Spatial anatomical entity</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma67112"/>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/Tooth -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/Tooth">
-        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma12516"/>
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/ToothStructure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/MaterialObject"/>
         <rdfs:comment xml:lang="en">A human tooth is the individual entity of the human dentition or the teeth as a whole. Teeth are parts of the skeleton, yet they are characterised by their own distinctive tissue and thus treated separately from bones. Teeth, such as the Dens caninus (canine tooth) are located on bone structures.</rdfs:comment>
         <rdfs:label xml:lang="en">Tooth</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.org/sig/ont/fma/fma12516"/>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/ToothPart -->
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/ToothPart">
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/ToothStructure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo/light/MaterialPart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.onto-med.de/ontologies/gfo.owl#partOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/partOf"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://annosaxfdm.de/ontology/Tooth"/>
             </owl:Restriction>
@@ -523,6 +672,7 @@
         <rdfs:comment xml:lang="en">A tooth part is a part of a single tooth.</rdfs:comment>
         <rdfs:label xml:lang="en">Tooth part</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- https://annosaxfdm.de/ontology/ToothStructure -->
@@ -531,11 +681,82 @@
         <rdfs:subClassOf rdf:resource="https://annosaxfdm.de/ontology/AnatomicalStructure"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://annosaxfdm.de/ontology/locatedOn"/>
+                <owl:onProperty rdf:resource="https://w3id.org/gfo/light/locatedIn"/>
                 <owl:someValuesFrom rdf:resource="https://annosaxfdm.de/ontology/BoneStructure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A tooth structure is either a single tooth or a tooth part.</rdfs:comment>
         <rdfs:label xml:lang="en">Tooth structure</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/gfo/light/Attributive -->
+
+    <owl:Class rdf:about="https://w3id.org/gfo/light/Attributive"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/Continuant -->
+
+    <owl:Class rdf:about="https://w3id.org/gfo/light/Continuant"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/ImmaterialContinuant -->
+
+    <owl:Class rdf:about="https://w3id.org/gfo/light/ImmaterialContinuant"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/Line -->
+
+    <owl:Class rdf:about="https://w3id.org/gfo/light/Line"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/MaterialAggregate -->
+
+    <owl:Class rdf:about="https://w3id.org/gfo/light/MaterialAggregate"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/MaterialContinuant -->
+
+    <owl:Class rdf:about="https://w3id.org/gfo/light/MaterialContinuant"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/MaterialObject -->
+
+    <owl:Class rdf:about="https://w3id.org/gfo/light/MaterialObject"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/MaterialPart -->
+
+    <owl:Class rdf:about="https://w3id.org/gfo/light/MaterialPart"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/Point -->
+
+    <owl:Class rdf:about="https://w3id.org/gfo/light/Point"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/Relator -->
+
+    <owl:Class rdf:about="https://w3id.org/gfo/light/Relator"/>
+    
+
+
+    <!-- https://w3id.org/gfo/light/Surface -->
+
+    <owl:Class rdf:about="https://w3id.org/gfo/light/Surface"/>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
