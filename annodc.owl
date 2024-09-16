@@ -18,7 +18,7 @@
         <dct:abstract xml:lang="en">The Anthropological Notation Ontology (ANNO) allows the systematic and standardized classification of recovered bone finds into the skeletal system, the description of the skeletal pieces, and the definition of functions for the derivation of different phenotypes of humans in forensic and historical anthropology. ANNO consists of two components: ANNOdc, a domain-core ontology providing core entities such as basic anatomical categories, and ANNOds, a domain-specific ontology used for annotating structures of the human skeleton. ANNO is integrated into AnthroWorks3D, a photogrammetry pipeline and application for the creation and analysis of 3D-models of human skeletal remains. The integration is based on the three-ontology method with the General Formal Ontology as the top-level ontology, ANNOdc as the task ontology and ANNOds as the domain ontology. Thus, AnthroWorks3D only needs to implement access to the entities (classes and properties) of the task ontology, whereas the entities of the corresponding domain ontology are imported dynamically. ANNO supports the analysis of skeletal and bone finds in forensic and historical anthropology, facilitating the standardization of data annotation and ensuring accurate preservation of information for posterity.</dct:abstract>
         <dct:contributor>Andy Ludwig</dct:contributor>
         <dct:contributor>Marleen Mohaupt</dct:contributor>
-        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-24</dct:created>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-16</dct:created>
         <dct:creator>&lt;a href=&apos;https://github.com/KonradHoeffner&apos;&gt;Konrad Höffner&lt;/a&gt;, &lt;a href=&apos;https://www.imise.uni-leipzig.de/en&apos;&gt;IMISE Leipzig, Germany&lt;/a&gt;</dct:creator>
         <dct:creator>&lt;a href=&apos;https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise/&apos;&gt;Marie Heuschkel&lt;/a&gt;, &lt;a href=&apos;https://www.cb.hs-mittweida.de/&apos;&gt;Hochschule Mittweida, Germany&lt;/a&gt;</dct:creator>
         <dct:creator>&lt;a href=&apos;https://www.cb.hs-mittweida.de/professoren-innen/forensik/prof-labudde/&apos;&gt;Dirk Labudde&lt;/a&gt;, &lt;a href=&apos;https://www.cb.hs-mittweida.de/&apos;&gt;Hochschule Mittweida, Germany&lt;/a&gt;</dct:creator>
@@ -36,7 +36,7 @@
         <rdfs:label xml:lang="en">Anthropological Notation Ontology</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://ols.imise.uni-leipzig.de/ontologies/anno"/>
         <rdfs:seeAlso rdf:resource="https://zenodo.org/record/8380382"/>
-        <owl:versionInfo>2024-04-09</owl:versionInfo>
+        <owl:versionInfo>2024-09-16</owl:versionInfo>
         <foaf:homepage>https://annosaxfdm.de/</foaf:homepage>
         <foaf:logo>https://annosaxfdm.imise.uni-leipzig.de/public/anno-logo-blue.svg</foaf:logo>
     </owl:Ontology>
