@@ -36,7 +36,7 @@ jobs:
         id: build
         run: |
              scripts/combine | tee $GITHUB_STEP_SUMMARY
-             scripts/transform
+             scripts/olsworkaround
              echo 'summary<<EOF' >> $GITHUB_OUTPUT
              cat ${GITHUB_STEP_SUMMARY} >> $GITHUB_OUTPUT
              echo 'EOF' >> $GITHUB_OUTPUT
