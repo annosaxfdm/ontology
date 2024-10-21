@@ -1,4 +1,5 @@
-# work around the missing multi language support of OLS
+# Work around the missing multi language support of OLS 2 by creating a separate anno-ols.ttl that includes the language tags inside the literal part.
+# As this violates standard practises, do *not* use it anywhere else.
 
 SCRIPT_PATH=`dirname "$0"` 
 ROOT=`( cd "$SCRIPT_PATH/.." && pwd )`   

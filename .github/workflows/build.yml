@@ -1,4 +1,4 @@
-name: build
+name: Combine ANNOdc and ANNOds, Deploy as RDF/Turtle
 
 on:
   workflow_dispatch:
@@ -10,18 +10,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Install dependencies
         run: sudo apt-get install -y raptor2-utils
 
-      - name: Build
-        run: |
-          scripts/combine | tee $GITHUB_STEP_SUMMARY
-          scripts/transform
+      - name: Combine ANNOdc and ANNOds and serialize as RDF Turtle files
+        # combine and print markdown tables with stats, show in GitHub
+        run: scripts/combine | tee $GITHUB_STEP_SUMMARY
 
-      - name: Deploy
+      - name: OLS 2 language support workaround
+        run: scripts/olsworkaround
+
+      - name: Deploy to the "dist" branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: dist
