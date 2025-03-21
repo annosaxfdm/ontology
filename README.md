@@ -5,8 +5,16 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-blue)](LICENSE)
 [![DOI](https://zenodo.org/badge/473966297.svg)](https://zenodo.org/badge/latestdoi/473966297)
 
-ANNO consists of ANNOdc (domain-core) and ANNOds (domain-specific).
-ANNOdc is connected to the [General Formal Ontology (GFO light)](https://w3id.org/gfo/light/).
+The ANthropological Notation Ontology (ANNO) allows the systematic and standardised classification of recovered bones into the skeletal system, the description of skeletal parts and the definition of functions for deriving human phenotypes in forensic and historical anthropology.
+ANNO consists of two components: ANNOdc, a domain-core ontology providing core entities such as basic anatomical categories, and ANNOds, a domain-specific ontology used to annotate structures of the human skeleton.
+The development of ANNO is motivated by the need for consistent data capture, improved comparability, easier access and sustainable preservation of human skeletal remains for research and cultural heritage contexts and was co-financed from tax funds based on the budget passed by the Parliament of the Free State of Saxony.
+
+ANNOds was embedded in ANNOdc, which in turn was originally founded with the [General Formal Ontology (GFO)](https://github.com/Onto-Med/GFO), and actually with [GFO-light](https://github.com/Onto-Med/gfo-light), i.e., the ANNOdc classes are subclasses of GFO-light classes.
+Our work has shown that GFO-light is fully sufficient for describing anthropological entities, their relations, compositions and spatial locations to each other and even offers some simplifications compared to the full version of GFO.
+
+![ANNOdc overview](images/ANNOdc.svg)
+
+**Fig. 1.** *ANNOdc - GFO-light embedding (overview)*
 
 ## Files
 
@@ -35,3 +43,5 @@ Install [pySHACL](https://github.com/RDFLib/pySHACL) and execute the `scripts/sh
 * [Anno Ontology Lookup Service (OLS)](https://ols.imise.uni-leipzig.de/index)
 * [Anno OLS Repository](https://github.com/annosaxfdm/ols)
 * [OLS Synchronization Component Repository](https://github.com/annosaxfdm/olsync)
+* [General Formal Ontology (GFO)](https://github.com/Onto-Med/GFO)
+* [GFO-light](https://github.com/Onto-Med/gfo-light)
