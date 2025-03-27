@@ -44,16 +44,42 @@
     </owl:Ontology>
 
     <!-- GFO light classes -->
-    <owl:Class rdf:about="https://w3id.org/gfo-light/Attributive"/>
-    <owl:Class rdf:about="https://w3id.org/gfo-light/Continuant"/>
-    <owl:Class rdf:about="https://w3id.org/gfo-light/Line"/>
-    <owl:Class rdf:about="https://w3id.org/gfo-light/Object"/>
-    <owl:Class rdf:about="https://w3id.org/gfo-light/ObjectAggregate"/>
-    <owl:Class rdf:about="https://w3id.org/gfo-light/ObjectBoundary"/>
-    <owl:Class rdf:about="https://w3id.org/gfo-light/ObjectPart"/>
-    <owl:Class rdf:about="https://w3id.org/gfo-light/Point"/>
-    <owl:Class rdf:about="https://w3id.org/gfo-light/Relator"/>
-    <owl:Class rdf:about="https://w3id.org/gfo-light/Surface"/>
+    <owl:Class rdf:about="https://w3id.org/gfo-light/Attributive">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/Continuant"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/gfo-light/Continuant">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/ConcreteIndividual"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/gfo-light/Line">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/ObjectBoundary"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/gfo-light/Object">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/Continuant"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/gfo-light/ObjectAggregate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/Continuant"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/gfo-light/ObjectBoundary">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/Continuant"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/gfo-light/ObjectPart">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/Continuant"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/gfo-light/Point">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/ObjectBoundary"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/gfo-light/Relator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/Attributive"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/gfo-light/Surface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/ObjectBoundary"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/gfo-light/ConcreteIndividual">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/Individual"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/gfo-light/Individual">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/Entity"/>
+    </owl:Class>
 
     <!-- GFO light properties -->
     <owl:ObjectProperty rdf:about="https://w3id.org/gfo-light/attributiveOf"/>
