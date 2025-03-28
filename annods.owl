@@ -727,7 +727,6 @@
 
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalAxis">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">Anatomical axis</rdfs:label>
         <rdfs:label xml:lang="de">Anatomische Achse</rdfs:label>
         <ontology:id>LO002</ontology:id>
@@ -747,7 +746,6 @@
 
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalLine">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://annosaxfdm.de/ontology/spatialEntityOf"/>
@@ -776,7 +774,6 @@
 
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalPlane">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">Anatomical plane</rdfs:label>
         <rdfs:label xml:lang="de">Anatomische Ebene</rdfs:label>
         <ontology:id>LO006</ontology:id>
@@ -796,7 +793,6 @@
 
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/AnatomicalPoint">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <ontology:id>AMP001</ontology:id>
     </owl:Class>
     
@@ -1608,7 +1604,6 @@
 
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/Bone">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">Bone</rdfs:label>
         <rdfs:label xml:lang="de">Knochen</rdfs:label>
         <rdfs:label xml:lang="la">Os</rdfs:label>
@@ -1644,7 +1639,6 @@
 
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/BoneCompound">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">Bone compound</rdfs:label>
         <rdfs:label xml:lang="la">Compositea ossia</rdfs:label>
         <rdfs:label xml:lang="la">Compositum ossium</rdfs:label>
@@ -1678,7 +1672,6 @@
 
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/BonePart">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <ontology:id>BP001</ontology:id>
     </owl:Class>
     
@@ -11710,7 +11703,6 @@
 
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/Phenotype">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <ontology:id>PH001</ontology:id>
     </owl:Class>
     
@@ -13131,7 +13123,6 @@
 
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/RelativeAnatomicalLocation">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">Relative anatomical location</rdfs:label>
         <rdfs:label xml:lang="de">Relative anatomische Lage</rdfs:label>
         <ontology:id>LO011</ontology:id>
@@ -14372,7 +14363,6 @@
 
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/Source">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <ontology:id>SO_0000</ontology:id>
     </owl:Class>
     
@@ -15000,7 +14990,6 @@
 
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/Tooth">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="la">Dentes</rdfs:label>
         <rdfs:label xml:lang="de">Zähne</rdfs:label>
         <ontology:id>DE001</ontology:id>
@@ -15529,7 +15518,6 @@
 
 
     <owl:Class rdf:about="https://annosaxfdm.de/ontology/VisualDefinition">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <ontology:id>IMAGE_0000</ontology:id>
     </owl:Class>
     

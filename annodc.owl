@@ -45,7 +45,7 @@
 
     <!-- GFO light classes -->
     <owl:Class rdf:about="https://w3id.org/gfo-light/Attributive">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/Continuant"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/ConcreteIndividual"/>
     </owl:Class>
     <owl:Class rdf:about="https://w3id.org/gfo-light/Continuant">
         <rdfs:subClassOf rdf:resource="https://w3id.org/gfo-light/ConcreteIndividual"/>
