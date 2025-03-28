@@ -1,0 +1,297 @@
+@prefix : <https://annosaxfdm.de/ontology/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix ov: <http://open.vocab.org/terms/>.
+@prefix dbo: <http://dbpedia.org/ontology/>.
+@prefix dbr: <http://dbpedia.org/resource/>.
+@prefix yago: <http://dbpedia.org/class/yago/>.
+@prefix doap: <http://usefulinc.com/ns/doap#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix swo: <http://www.ebi.ac.uk/swo/>.
+@prefix swol: <http://www.ebi.ac.uk/swo/license/>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix schema: <http://schema.org/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix sh:<http://www.w3.org/ns/shacl#>.
+@base <https://annosaxfdm.de/ontology/>.
+
+:ignoredProperties rdf:first vann:example;
+	rdf:rest ( rdf:type rdfs:subClassOf rdfs:comment rdfs:seeAlso skos:altLabel dc:source skos:definition owl:sameAs rdfs:isDefinedBy schema:error :abbreviation).
+
+:labelShape a sh:PropertyShape;
+	sh:path rdfs:label;
+	sh:minCount 1.
+
+:idShape a sh:PropertyShape;
+	sh:path :id;
+	sh:exactCount 1.
+
+:sourceShape a sh:PropertyShape;
+	sh:path :source;
+	sh:exactCount 1.
+
+:definitionShape a sh:PropertyShape;
+	sh:path :definition;
+	sh:exactCount 1.
+
+:visualDefinitionShape a sh:PropertyShape;
+	sh:path :visualDefinition;
+	sh:exactCount 1.
+
+:boneAffixShape a sh:PropertyShape;
+	sh:path :boneAffix;
+	sh:exactCount 1.
+
+:typeShape a sh:PropertyShape;
+	sh:path :type;
+	sh:exactCount 1.
+
+# SHACL does not support inheritance without using SPARQL so many values are duplicated.
+# See <https://stackoverflow.com/questions/70785194/shacl-closed-shape-with-superclass-inheritance>.
+# SHACL also doesn't support pairwise disjointness so we need to specify the full list on every shape.
+
+#### Bone ###################################################################
+:BoneShape a sh:NodeShape;
+	sh:targetClass :BoneClass;
+	sh:disjoint :BonePartShape;
+	sh:property :labelShape,
+		:idShape,
+		:sourceShape,
+		:definitionShape,
+		[sh:path :fmaId],
+		[sh:path :ta2Id],
+		[sh:path skos:closeMatch],
+		[sh:path skos:exactMatch];
+	sh:closed true;
+	sh:ignoredProperties :ignoredProperties.
+
+#### BonePart ###################################################################
+:BonePartShape a sh:NodeShape;
+	sh:targetClass :BonePartClass;
+	sh:disjoint :BoneShape;
+	sh:property :labelShape,
+		:idShape,
+		:sourceShape,
+		:definitionShape,
+		:boneAffixShape,
+		:visualDefinitionShape,
+		[sh:path :fmaId],
+		[sh:path :ta2Id],
+		[sh:path skos:closeMatch],
+		[sh:path skos:exactMatch];
+	sh:closed true;
+	sh:ignoredProperties :ignoredProperties.
+
+#### BoneCompound ###################################################################
+:BoneCompoundShape a sh:NodeShape;
+	sh:targetClass :BoneCompoundClass;
+	sh:disjoint :BoneShape;
+	sh:property :labelShape,
+		:idShape,
+		:sourceShape,
+		:definitionShape,
+		:boneAffixShape,
+		:visualDefinitionShape,
+		[sh:path :fmaId],
+		[sh:path :ta2Id],
+		[sh:path skos:closeMatch],
+		[sh:path skos:exactMatch];
+	sh:closed true;
+	sh:ignoredProperties :ignoredProperties.
+
+#### Tooth ###################################################################
+:universalNumberingSystemShape a sh:PropertyShape;
+	sh:path :universalNumberingSystem;
+	sh:exactCount 1.
+
+:fdiCodeShape a sh:PropertyShape;
+	sh:path :fdiCode;
+	sh:minCount 1.
+
+:ToothShape a sh:NodeShape;
+	sh:targetClass :ToothClass;
+	sh:disjoint :BoneShape;
+	# :DensPermanens as superclass does not have an FDI code
+	sh:xone (
+		[ sh:hasValue :DensPermanens ]
+		[
+			sh:property :labelShape,
+				:idShape,
+				:sourceShape,
+				:definitionShape,
+				:boneAffixShape,
+				:visualDefinitionShape,
+				:universalNumberingSystemShape,
+				:fdiCodeShape,
+				[sh:path :fmaId],
+				[sh:path :ta2Id],
+				[sh:path skos:closeMatch],
+				[sh:path skos:exactMatch];
+				sh:closed true;
+				sh:ignoredProperties :ignoredProperties
+		]
+	).
+
+#### Phenotype ###################################################################
+:accuracyShape a sh:PropertyShape;
+	sh:path :accuracy;
+	sh:exactCount 1.
+
+:missclassificationShape a sh:PropertyShape;
+	sh:path :missclassification;
+	sh:exactCount 1.
+
+:populationShape a sh:PropertyShape;
+	sh:path :population;
+	sh:exactCount 1.
+
+:sampleSizeShape a sh:PropertyShape;
+	sh:path :sampleSize;
+	sh:exactCount 1.
+
+:thresholdFemaleShape a sh:PropertyShape;
+	sh:path :thresholdFemale;
+	sh:exactCount 1.
+
+:thresholdIndifferentShape a sh:PropertyShape;
+	sh:path :thresholdIndifferent;
+	sh:exactCount 1.
+
+:thresholdMaleShape a sh:PropertyShape;
+	sh:path :thresholdMale;
+	sh:exactCount 1.
+
+:functionShape a sh:PropertyShape;
+	sh:path :function;
+	sh:exactCount 1.
+
+:PhenotypeShape a sh:NodeShape;
+	sh:targetClass :PhenotypeClass;
+	sh:disjoint :BoneShape;
+	sh:property :labelShape,
+		:idShape,
+		:sourceShape,
+		:definitionShape,
+		:boneAffixShape,
+		:visualDefinitionShape,
+		:accuracyShape,
+		:missclassificationShape,
+		:populationShape,
+		:sampleSizeShape,
+		:thresholdFemaleShape,
+		:thresholdIndifferentShape,
+		:thresholdMaleShape,
+		:functionShape,
+		[sh:path :fmaId],
+		[sh:path :ta2Id],
+		[sh:path skos:closeMatch],
+		[sh:path skos:exactMatch];
+	sh:closed true;
+	sh:ignoredProperties :ignoredProperties.
+
+#### AnatomicalPoint ###################################################################
+:AnatomicalPointShape a sh:NodeShape;
+	sh:targetClass :AnatomicalPointClass;
+	sh:disjoint :BoneShape;
+	sh:property :labelShape,
+		:idShape,
+		:sourceShape,
+		:definitionShape,
+		:boneAffixShape,
+		:visualDefinitionShape,
+		[sh:path :fmaId],
+		[sh:path :ta2Id],
+		[sh:path skos:closeMatch],
+		[sh:path skos:exactMatch];
+	sh:closed true;
+	sh:ignoredProperties :ignoredProperties.
+
+#### AnatomicalLine ###################################################################
+:physicalInstrumentShape a sh:PropertyShape;
+	sh:path :physicalInstrument;
+	sh:exactCount 1.
+
+:digitalInstrumentShape a sh:PropertyShape;
+	sh:path :digitalInstrument;
+	sh:exactCount 1.
+
+:shortDefShape a sh:PropertyShape;
+	sh:path :shortDef;
+	sh:exactCount 1.
+
+:AnatomicalLineShape a sh:NodeShape;
+	sh:targetClass :AnatomicalLineClass;
+	sh:disjoint :BoneShape;
+	sh:property :labelShape,
+		:idShape,
+		:sourceShape,
+		:definitionShape,
+		:boneAffixShape,
+		:visualDefinitionShape,
+		:physicalInstrumentShape,
+		:digitalInstrumentShape,
+		:shortDefShape,
+		[sh:path :fmaId],
+		[sh:path :ta2Id],
+		[sh:path skos:closeMatch],
+		[sh:path skos:exactMatch];
+	sh:closed true;
+	sh:ignoredProperties :ignoredProperties.
+
+#### AnatomicalAxis ###################################################################
+:AnatomicalAxisShape a sh:NodeShape;
+	sh:targetClass :AnatomicalAxisClass;
+	sh:disjoint :BoneShape;
+	sh:property :labelShape,
+		:idShape,
+		:sourceShape,
+		:definitionShape,
+		:boneAffixShape,
+		:visualDefinitionShape,
+		:typeShape,
+		[sh:path :fmaId],
+		[sh:path :ta2Id],
+		[sh:path skos:closeMatch],
+		[sh:path skos:exactMatch];
+	sh:closed true;
+	sh:ignoredProperties :ignoredProperties.
+
+#### AnatomicalPlane ###################################################################
+:AnatomicalPlaneShape a sh:NodeShape;
+	sh:targetClass :AnatomicalPlaneClass;
+	sh:disjoint :BoneShape;
+	sh:property :labelShape,
+		:idShape,
+		:sourceShape,
+		:definitionShape,
+		:boneAffixShape,
+		:visualDefinitionShape,
+		:typeShape,
+		[sh:path :fmaId],
+		[sh:path :ta2Id],
+		[sh:path skos:closeMatch],
+		[sh:path skos:exactMatch];
+	sh:closed true;
+	sh:ignoredProperties :ignoredProperties.
+
+#### RelativeAnatomicalLocation ###################################################################
+:RelativeAnatomicalLocationShape a sh:NodeShape;
+	sh:targetClass :RelativeAnatomicalLocationClass;
+	sh:disjoint :BoneShape;
+	sh:property :labelShape,
+		:idShape,
+		:sourceShape,
+		:definitionShape,
+		:boneAffixShape,
+		:visualDefinitionShape,
+		:typeShape,
+		[sh:path :fmaId],
+		[sh:path :ta2Id],
+		[sh:path skos:closeMatch],
+		[sh:path skos:exactMatch];
+	sh:closed true;
+	sh:ignoredProperties :ignoredProperties.
