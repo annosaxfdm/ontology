@@ -1,0 +1,76 @@
+---
+cff-version: 1.2.0
+message: "If you use ANNO, please cite our article in the Semantic Web journal."
+type: dataset
+title: "Anthropological Notation Ontology"
+abstract: >
+         The ANthropological Notation Ontology (ANNO) allows the systematic and standardised classification of recovered bones into the skeletal system,
+         the description of skeletal parts and the definition of functions for deriving human phenotypes in forensic and historical anthropology.
+         ANNO consists of two components:
+         ANNOdc, a domain-core ontology providing core entities such as basic anatomical categories,
+         and ANNOds, a domain-specific ontology used to annotate structures of the human skeleton.
+repository-code: 'https://github.com/annosaxfdm/ontology'
+authors:
+  - family-names: Uciteli
+    given-names: Alexandr
+    orcid: https://orcid.org/0000-0001-9558-5352
+    affiliation: Leipzig University, Institute for Medical Informatics, Statistics and Epidemiology, Leipzig, Germany
+  - family-names: Labudde
+    given-names: Dirk
+    affiliation: University of Applied Sciences Mittweida, Mittweida, Germany
+  - family-names: Heuschkel
+    given-names: Marie
+    affiliation: University of Applied Sciences Mittweida, Mittweida, Germany
+    orcid: https://orcid.org/0009-0008-3357-7080
+  - family-names: Höffner
+    given-names: Konrad
+    orcid: https://orcid.org/0000-0001-7358-3217
+    affiliation: Leipzig University, Institute for Medical Informatics, Statistics and Epidemiology, Leipzig, Germany
+  - family-names: Schmiedel
+    given-names: Fabian
+    affiliation: University of Applied Sciences Mittweida, Mittweida, Germany
+  - family-names: Ludwig
+    given-names: Andy
+    affiliation: University of Applied Sciences Mittweida, Mittweida, Germany
+  - family-names: Mohaupt
+    given-names: Marleen
+    affiliation: University of Applied Sciences Mittweida, Mittweida, Germany
+keywords:
+  - ontology
+  - ontology development
+  - semantic web
+  - anthropology
+license: "CC-BY-4.0"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.8301559
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Heuschkel
+      given-names: Marie
+      affiliation: University of Applied Sciences Mittweida, Mittweida, Germany
+      orcid: https://orcid.org/0009-0008-3357-7080
+    - family-names: Höffner
+      given-names: Konrad
+      orcid: https://orcid.org/0000-0001-7358-3217
+      email: konrad.hoeffner@uni-leipzig.de
+      affiliation: Leipzig University, Institute for Medical Informatics, Statistics and Epidemiology, Leipzig, Germany
+    - family-names: Schmiedel
+      given-names: Fabian
+      affiliation: University of Applied Sciences Mittweida, Mittweida, Germany
+    - family-names: Labudde
+      given-names: Dirk
+      affiliation: University of Applied Sciences Mittweida, Mittweida, Germany
+    - family-names: Uciteli
+      given-names: Alexandr
+      orcid: https://orcid.org/0000-0001-9558-5352
+      affiliation: Leipzig University, Institute for Medical Informatics, Statistics and Epidemiology, Leipzig, Germany
+  title: "The ANthropological Notation Ontology (ANNO): A core ontology for annotating human bones and deriving phenotypes"
+  journal: Semantic Web
+  year: 2025
+  volume: 16
+  number: 4
+  doi: 10.1177/2210496825134445
+  publisher:
+    name: "SAGE Publications Sage UK: London, England"
